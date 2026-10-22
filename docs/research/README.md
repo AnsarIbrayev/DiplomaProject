@@ -16,8 +16,8 @@ The committee asks *"what evidence informs the requirements and whether verified
 | [03-recruitment-and-consent.md](03-recruitment-and-consent.md) | Selection criteria, screening, recruitment messages, informed consent (EN/RU) | Ready |
 | [04-interview-guide.md](04-interview-guide.md) | User guide (Q1–Q20) and expert guide (X1–X8), EN/RU, linked to assumptions | Ready |
 | [05-results-template.md](05-results-template.md) | Record template for each interview, data-protection rules | Ready |
-| [06-analysis-and-summary.md](06-analysis-and-summary.md) | Analysis steps, summary report structure, traceability to requirements, slide outline | Ready; to be filled after interviews |
-| `interviews/` | Anonymised records P1–P5, X1 | To be created |
+| [relevance-summary.md](relevance-summary.md) | Analysis steps, summary report (finding → requirement → status), slide outline | Ready; to be filled after interviews |
+| [interviews/](interviews/) | Anonymised records P1–P5, X1 | Empty until interviews take place |
 
 ## Plan to complete DOA-4
 

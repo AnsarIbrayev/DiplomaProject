@@ -1,4 +1,4 @@
-# 6. Analysis Procedure and Summary Report
+# 6. Relevance Summary: Analysis Procedure and Report
 
 | | |
 |---|---|
@@ -49,9 +49,15 @@ For each theme: one-sentence finding, number of participants (for example, "4 of
 |---|---|---|
 | (copy each A- and E-assumption with its final status from the register) | Verified / Partially supported / Refuted / Inconclusive / Unverified | Finding IDs or source |
 
-### 5. Implications for requirements
+### 5. Findings and requirements
 
-List requirements that were added, changed, re-prioritized or removed because of the evidence, with the finding IDs (see 6.5).
+Every finding is linked to at least one requirement and marked as verified or assumption (acceptance criterion of DOA-4).
+
+| Finding / theme | Requirement(s) | Status | Evidence |
+|---|---|---|---|
+| T1 ... | FR-__, NFR-__ | Verified / Assumption | Finding IDs or source |
+
+Then list requirements that were added, changed, re-prioritized or removed because of the evidence (see 6.5).
 
 ### 6. Limitations
 
