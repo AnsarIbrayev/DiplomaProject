@@ -1,6 +1,6 @@
 # Мобильная рекомендательная система для выявления факторов ожирения и персонализированного управления весом
 
-Дипломный проект · Astana IT University · School of Software Engineering · группа SE-2424
+Дипломный проект · Astana IT University · School of Software Engineering
 
 ## Тема
 
