@@ -39,7 +39,7 @@
 
 ## Управление задачами
 
-Задачи ведутся в YouTrack: https://yeralytemir.youtrack.cloud
+Задачи ведутся в YouTrack, проект DOA: https://yeralytemir.youtrack.cloud/projects/DOA
 
 ## Правила работы
 
