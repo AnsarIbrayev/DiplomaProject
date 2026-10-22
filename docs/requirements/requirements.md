@@ -5,7 +5,7 @@
 | **Project** | Development of a Mobile Recommender System for Identifying Obesity Factors and Personalized Weight Management |
 | **Document type** | Software requirements specification (pre-defense item 6) |
 | **YouTrack task** | [DOA-8](https://yeralytemir.youtrack.cloud/issue/DOA-8) |
-| **Version / date** | 1.2 draft, 22 October 2026 (1.1: minimum OS versions and hosting from DOA-7; 1.2: Kazakh, Russian and English as equal Must languages, FR-39) |
+| **Version / date** | 1.2 draft, 22 October 2026 (1.1: minimum OS versions and hosting from DOA-7; 1.2: Kazakh, Russian and English as equal Must languages, FR-39; 1.3: AI-assisted food logging FR-40, NFR-25 and NFR-06 aligned with DOA-7) |
 | **Inputs** | [Project proposal](../proposal/proposal.md); [Literature review](../research/literature-review.md); [Existing system comparison](../research/existing-systems.md); [Assumptions register](../research/02-assumptions-register.md); [Relevance summary](../research/relevance-summary.md) |
 
 ---
@@ -168,9 +168,15 @@ Acceptance criteria are written as Given/When/Then statements or as a measurable
 |---|---|---|---|---|---|
 | FR-39 | The system shall let the user switch the interface language between Kazakh, Russian and English at any time in the settings, without reinstalling the application or losing data. | Must | **Given** a user with logged data, **when** they switch the language in the settings, **then** all screens, recommendations, explanations (FR-23) and notifications appear in the selected language without restarting the application, and all data remain unchanged. | D | E (G3, existing systems C2); team decision 22.10.2026 |
 
-### 3.11 Won't (this release)
+### 3.11 AI-assisted food logging
 
-For completeness, the following features are agreed as out of scope (proposal, Section 7.2; existing-system comparison, Section 5.2): barcode, photo or voice food logging; recipes and social features; human coaching or chat; recommendations from large language models or other opaque models; app-store release and payments; integration with clinical information systems.
+| ID | Requirement | Priority | Acceptance criteria | Verif. | Source |
+|---|---|---|---|---|---|
+| FR-40 | The system shall offer AI-assisted food logging: the user describes a meal in text or takes a photo, an external multimodal AI service proposes candidate foods and portions from the project's food database, and the user confirms or corrects them before they are saved as an ordinary food log entry (FR-07). The feature can be switched off by the RA and is available in the same way in both study arms. | Should | **Given** a meal description or photo, **when** the AI proposal is returned, **then** only foods from the project's food database are proposed, nothing is saved until the user confirms, and the saved entry is identical in form to a manually logged entry; **given** the RA has switched the feature off, **then** the option is hidden for all users; the request sent to the AI service contains no user identifier and no profile data (checked by inspecting logged requests). | T, I | Team decision 22.10.2026 (DOA-7); E (existing systems C3: photo and voice logging in competitors); A2 |
+
+### 3.12 Won't (this release)
+
+For completeness, the following features are agreed as out of scope (proposal, Section 7.2; existing-system comparison, Section 5.2): barcode and voice food logging (photo and text logging are covered only as AI-assisted pre-filling, FR-40); recipes and social features; human coaching or chat; recommendations from large language models or other opaque models; app-store release and payments; integration with clinical information systems.
 
 ---
 
@@ -187,7 +193,7 @@ Categories follow the product quality model of ISO/IEC 25010 [5]. Numeric thresh
 | NFR-03 | Research data shall be keyed by a pseudonymous study ID; direct identifiers (name, e-mail, phone) shall be stored separately and never included in exports or analytics. | Must | Export files (FR-35) and analytics tables contain no direct identifier, checked by an automated scan of column names and values. | T, I | P (Sections 3, 8); R [1] |
 | NFR-04 | The system shall collect only the data listed in the data dictionary and shall contain no third-party advertising or cross-app tracking SDK. | Must | Every stored field appears in the data dictionary; the dependency list contains no advertising or tracking SDK. | I | P (Section 8); E (existing systems, C10); R [2] (MASVS-PRIVACY); A10 |
 | NFR-05 | Access shall be role-based: a participant accesses only their own data; only the RA role can view enrollment and export data. | Must | **Given** participant A's session token, **when** it requests participant B's data or the export endpoint, **then** the request is refused (HTTP 403 or equivalent). | T | P (Section 8); R [2] (MASVS-AUTH) |
-| NFR-06 | Personal data of participants shall be stored in a database located on the territory of the Republic of Kazakhstan. | Must | Inspection of the hosting configuration shows the production database in Kazakhstan. The legal interpretation for a university research prototype is to be confirmed with the supervisor and the AITU ethics committee (DOA-24). | I | R [1] (Art. 12, para. 2) |
+| NFR-06 | Personal data of participants shall be stored only in a database located on the territory of the Republic of Kazakhstan. Development and test environments hosted outside Kazakhstan (AWS, DOA-7) shall contain only synthetic or test data. | Must | Inspection of the hosting configuration before the first enrollment shows the production database in Kazakhstan; inspection of the development database shows no participant data. The legal interpretation for a university research prototype is to be confirmed with the supervisor and the AITU ethics committee (DOA-24). | I | R [1] (Art. 12, para. 2) |
 | NFR-07 | The system shall keep a record of consent (version, date) and shall delete or destroy personal data on a valid deletion request or at the end of the retention period set in the ethics application. | Should | **Given** a deletion request, **when** the RA executes it, **then** identity data are removed and the action is logged. | D, I | R [1] (Art. 18); DOA-24 |
 | NFR-08 | The repository shall contain no secrets, keys or participant data. | Must | Secret scanning of the repository reports no findings; configuration uses an example file without real values. | I | Project rules (CLAUDE.md) |
 
@@ -231,7 +237,7 @@ Categories follow the product quality model of ISO/IEC 25010 [5]. Numeric thresh
 | NFR-22 | The rule engine shall be deterministic: the same inputs and rule version shall always produce the same output. | Must | Running batch verification (FR-38) twice on the same 200 profiles and rule version produces identical reports. | T | P (Section 8); E (L4) |
 | NFR-23 | Every stored recommendation shall reference the rule ID and version that produced it and a snapshot of its inputs, so that it can be reproduced later. | Must | For a random sample of 20 stored recommendations, re-running the referenced rule version on the stored inputs reproduces each recommendation. | T | P (O1, Section 8); E (G1) |
 | NFR-24 | 100% of plans generated for the 200 synthetic profiles shall satisfy all hard constraints before the pilot starts. | Must | The batch verification report (FR-38) shows zero violations; any violation leads to rule correction and a full re-run. | T | P (O2, SQ1) |
-| NFR-25 | No recommendation shall be generated by an opaque model. If an auxiliary machine-learning component is adopted (decision in DOA-7), its output may only be an input to the rule engine, and every resulting recommendation shall still satisfy FR-23 and FR-24. | Must | Inspection of the recommendation pipeline shows that every recommendation is produced by a versioned rule. | I | P (Section 7.2); E (L4, L13, literature review Section 4) |
+| NFR-25 | No machine-learning or AI model shall generate, rank or modify recommendations. AI output may only pre-fill food log entries that the user confirms (FR-40). | Must | Inspection of the recommendation pipeline shows that every recommendation is produced by a versioned rule and that the AI service has no access to profiles, factor scores or recommendations. | I | P (Section 7.2); E (L4, L13, literature review Section 4); DOA-7 |
 
 ### 4.7 Maintainability and interoperability
 
@@ -247,7 +253,7 @@ Categories follow the product quality model of ISO/IEC 25010 [5]. Numeric thresh
 
 | ID | Constraint | Source |
 |---|---|---|
-| CON-01 | Only free or open-source frameworks, libraries and services (or free tiers) are used. | Proposal, Section 9 |
+| CON-01 | Only free or open-source frameworks, libraries and services (or free tiers) are used. The one agreed exception is the paid-per-request AI service for FR-40. | Proposal, Section 9; DOA-7 |
 | CON-02 | The prototype must be ready in November 2026, verified in December 2026, and the pilot runs February–April 2027; the thesis is submitted by 31 May 2027. | Proposal, Section 10 |
 | CON-03 | The system is built by a team of three: one mobile developer, one backend developer, and one analyst responsible for the rule base and verification. | Proposal, Section 1 |
 | CON-04 | No participant data are collected before AITU ethics approval and written informed consent. | Proposal, Section 9 |
@@ -261,7 +267,7 @@ Categories follow the product quality model of ISO/IEC 25010 [5]. Numeric thresh
 | Objective or gap | Requirements |
 |---|---|
 | **O1** Explainable rule base, factor identification | FR-13, FR-14, FR-15, FR-16, FR-18, FR-22, FR-23, FR-37, NFR-22, NFR-23, NFR-25 |
-| **O2** Cross-platform prototype, verification (SQ1) | FR-07, FR-10, FR-11, FR-12, FR-17, FR-19, FR-24, FR-25, FR-38, NFR-20, NFR-21, NFR-24, NFR-26 |
+| **O2** Cross-platform prototype, verification (SQ1) | FR-07, FR-40, FR-10, FR-11, FR-12, FR-17, FR-19, FR-24, FR-25, FR-38, NFR-20, NFR-21, NFR-24, NFR-26 |
 | **O3** Engagement comparison | FR-25, FR-30, FR-31, FR-32, FR-33, FR-35, NFR-16, NFR-17, NFR-27 |
 | **O4** Weight-related outcomes and safety | FR-09, FR-10, FR-28, FR-29, FR-34, FR-35 |
 | Eligibility and safety (proposal, Section 3) | FR-04, FR-05, FR-29 |
@@ -282,13 +288,13 @@ Categories follow the product quality model of ISO/IEC 25010 [5]. Numeric thresh
 | L6 Engagement rarely defined | FR-32, NFR-16 |
 | L9 Short-lived prompt effects | FR-12, FR-18, FR-25 |
 | L10 Passive sensing does not sustain engagement | FR-11, NFR-21 |
-| L11 Targets alone are hard to follow | FR-07, FR-17 |
+| L11 Targets alone are hard to follow | FR-07, FR-17, FR-40 |
 | L12 Energy-only optimization | FR-16, FR-20, FR-21 |
 | L13 Factor models depend on non-local data | FR-13, NFR-25 |
 | L15 Unsupervised use unsafe for some people | FR-04, FR-05, FR-29 |
 | L16 No studies from Central Asia | FR-07, FR-39, NFR-19 |
 
-L7 (no human coaching) and L8 (12-week follow-up) are design decisions of the study and appear in Section 3.11 and in the evaluation plan, not as system requirements. L14 (cost of precision nutrition) is covered by the scope: only smartphone data and an optional wearable.
+L7 (no human coaching) and L8 (12-week follow-up) are design decisions of the study and appear in Section 3.12 and in the evaluation plan, not as system requirements. L14 (cost of precision nutrition) is covered by the scope: only smartphone data and an optional wearable.
 
 ### 6.3 Requirements that depend on unverified assumptions
 
@@ -296,7 +302,7 @@ These requirements are kept, because they also rest on the proposal or the liter
 
 | Assumption | Requirements to review | What could change |
 |---|---|---|
-| A2 Users abandon apps because of logging effort | FR-08, NFR-12, NFR-17 | Priority of custom foods and fast logging |
+| A2 Users abandon apps because of logging effort | FR-08, FR-40, NFR-12, NFR-17 | Priority of custom foods and fast logging |
 | A4 Explanations increase trust | FR-14, FR-23 | Form of the explanation, not its presence (presence is required by G1 and L4) |
 | A5 Local foods missing in databases | FR-07, FR-17 | Size of the local-food list |
 | A6 Users want to see which factors matter | FR-13, FR-14 | Presentation of the factor ranking |
@@ -312,7 +318,7 @@ These requirements are kept, because they also rest on the proposal or the liter
 
 | Task | What this specification needs from it |
 |---|---|
-| DOA-7 Technology comparison | Resolved: minimum OS versions Android 9 and iOS 15 (NFR-20); self-hosted server located in Kazakhstan, provider to be agreed with the supervisor (NFR-06). Open: decision on an ML component (NFR-25), awaiting team confirmation |
+| DOA-7 Technology comparison | Resolved: minimum OS versions Android 9 and iOS 15 (NFR-20); development on AWS with synthetic data only, pilot on a server in Kazakhstan before the first enrollment (NFR-06); AI used only for food-logging pre-fill (FR-40, NFR-25) |
 | DOA-12 Evaluation plan | Definition of an active day, randomization method (FR-30), schedule of study measurements (FR-34) |
 | DOA-16 Rule base | Numeric targets, thresholds and tolerances referenced by FR-13, FR-15–FR-22, FR-24; local-food test list (FR-07) |
 | DOA-24 Ethics application | Retention period and deletion procedure (NFR-07), legal check of data residency (NFR-06) |
@@ -323,7 +329,7 @@ These requirements are kept, because they also rest on the proposal or the liter
 ## 7. Open Questions
 
 1. **Interface languages (resolved, 22 October 2026).** The team decided that Kazakh, Russian and English are equal Must languages with an in-app switch (FR-39, NFR-19). The existing-system comparison found Kazakh only in TayQazan Tracker (G3). Translations of rule explanations need a review by a native speaker of each language before the pilot.
-2. **Auxiliary ML component (NFR-25).** Decided in the technology comparison (DOA-7). NFR-25 already restricts any such component to an input of the rule engine.
+2. **AI component (resolved, 22 October 2026).** The team chose AI-assisted food logging only (FR-40); recommendations remain rule-based (NFR-25). Open: whether sending participants' meal photos or text to an external AI service is allowed by the ethics approval and by the Law on Personal Data (cross-border transfer); to be confirmed in DOA-24. If it is not allowed, FR-40 is switched off for the pilot.
 3. **Data residency (NFR-06).** Applicability of Article 12(2) of the Law on Personal Data to a university research prototype is to be confirmed with the supervisor and the ethics committee.
 4. **Team-set thresholds** (prompt limit, response times, availability, notification delay). They are engineering targets and may be adjusted after the prototype is measured; any change is recorded in this document's version history.
 
@@ -333,7 +339,7 @@ These requirements are kept, because they also rest on the proposal or the liter
 
 | Type | Must | Should | Could | Total |
 |---|---|---|---|---|
-| Functional | 28 | 10 | 1 | 39 |
+| Functional | 28 | 11 | 1 | 40 |
 | Non-functional | 20 | 8 | 0 | 28 |
 
 Every Must requirement has a testable acceptance criterion and a verification method; these criteria are reused as test cases in the verification and evaluation plan (DOA-12).
