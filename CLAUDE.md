@@ -1,6 +1,6 @@
 # Контекст проекта
 
-Дипломная работа, Astana IT University, School of Software Engineering, группа SE-2424.
+Дипломная работа, Astana IT University, School of Software Engineering.
 
 Тема: «Разработка мобильной рекомендательной системы для выявления факторов ожирения и персонализированного управления весом».
 
