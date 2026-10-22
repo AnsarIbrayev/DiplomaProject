@@ -34,7 +34,7 @@ All documents are in the `develop` branch of the repository. Links are relative 
 | # | Deliverable | Document | Task | Status | What we ask the supervisor to check |
 |---|---|---|---|---|---|
 | 1 | Project proposal | [proposal.md](../../proposal/proposal.md) | DOA-3 | Draft 1.0, ready for review | Aim, research question SQ1, objectives O1–O4, hypotheses H1–H3, scope |
-| 2 | Evidence of relevance | [relevance-summary.md](../../research/relevance-summary.md) | DOA-4 | In progress. Desk research complete (WHO, NCD-RisC, GBD 2021, WHO STEPS Kazakhstan 2021–2022). User interviews have not been conducted; user evidence is being planned as a short online survey | Whether this evidence is sufficient for pre-defense 1 (question A2) |
+| 2 | Evidence of relevance | [relevance-summary.md](../../research/relevance-summary.md) | DOA-4 | Report based on verified secondary evidence: published statistics (WHO, NCD-RisC, GBD 2021, WHO STEPS Kazakhstan 2021–2022), literature and the existing-system comparison. User interviews have not been conducted; an anonymous online survey ([survey-form.md](../../research/survey/survey-form.md)) is planned as validation, no user data entered yet | Whether this evidence is sufficient for pre-defense 1 (question A2) |
 | 3 | Literature review | [literature-review.md](../../research/literature-review.md) | DOA-5 | Complete, 27 sources with an analysis table | Source selection and identified limitations L1–L16 |
 | 4 | Existing system comparison | [existing-systems.md](../../research/existing-systems.md) | DOA-6 | Complete: 5 applications, 10 criteria | Choice of systems and criteria |
 | 5 | Technology comparison | [technology-comparison.md](../../architecture/technology-comparison.md) | DOA-7 | Complete: 7 decisions (D1–D7) with alternatives | Selected stack: Flutter, FastAPI, PostgreSQL, rule-based engine, AI only for food-logging pre-fill |
@@ -42,7 +42,7 @@ All documents are in the `develop` branch of the repository. Links are relative 
 | 7 | Diagrams (context, use case, component) | [docs/architecture/](../../architecture/) | DOA-9, DOA-10 | In progress, due 23 October 2026 | Will be sent as soon as merged |
 | 8 | UX prototype | [prototype/README.md](../../prototype/README.md), code in [`mobile/`](../../../mobile/) | DOA-11 | Complete, v0.1 clickable Flutter app. All data are synthetic; food values are illustrative placeholders | Coverage of the key user scenarios |
 | 9 | Verification and evaluation plan | [evaluation-plan.md](../../evaluation/evaluation-plan.md) | DOA-12 | Complete, v1.1. Values marked (T) need confirmation (question B1) | Pilot design, outcome definitions, analysis |
-| 10 | Project management and risks | `docs/` (path added when merged) | DOA-13 | In progress, due 23 October 2026 | Will be sent as soon as merged |
+| 10 | Project management and risks | [project-management.md](../../project-management.md) | DOA-13 | Complete, v1.0: roles, workflow, milestones, dependencies, risk register with 17 risks | Milestones and high risks (ethics approval, recruitment, server in Kazakhstan) |
 | 11 | Supervisor feedback | This package | DOA-14 | Waiting for the supervisor's review | – |
 
 If the supervisor does not have access to the repository, the team sends the documents as PDF files (see Section 5).
@@ -111,6 +111,6 @@ The prototype also contains placeholder rule thresholds marked (T) ([prototype/R
 | Step | Action | Who |
 |---|---|---|
 | 1 | Send the cover message ([cover-message-ru.md](cover-message-ru.md)) with this package and the feedback form | Ansar Ibrayev |
-| 2 | If the supervisor has no repository access, attach PDF exports of deliverables 1–6, 8 and 9 | Ansar Ibrayev |
-| 3 | Send diagrams (7) and project management and risks (10) as soon as they are merged | Ansar Ibrayev |
+| 2 | If the supervisor has no repository access, attach PDF exports of deliverables 1–6 and 8–10 | Ansar Ibrayev |
+| 3 | Send the diagrams (7) as soon as they are merged | Ansar Ibrayev |
 | 4 | Record the feedback in the log and open pull requests for the changes | Team |
