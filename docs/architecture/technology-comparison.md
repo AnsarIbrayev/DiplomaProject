@@ -4,7 +4,7 @@
 |---|---|
 | **Pre-defense item** | 5. Technology comparison |
 | **YouTrack task** | [DOA-7](https://yeralytemir.youtrack.cloud/issue/DOA-7) |
-| **Version / date** | 1.0, 22 October 2026 |
+| **Version / date** | 1.1, 22 October 2026 (D7 and development hosting added) |
 | **Evidence checked on** | 22 October 2026 (all online sources) |
 | **Related documents** | [Project proposal](../proposal/proposal.md), [requirements](../requirements/requirements.md) (DOA-8), [literature review](../research/literature-review.md), [existing system comparison](../research/existing-systems.md), [architecture](architecture.md) |
 
@@ -14,9 +14,9 @@
 
 ### 1.1 Purpose
 
-This document records the key technical decisions of the project. For each decision it compares the selected technology with two or three reasonable alternatives against the same criteria, states the decision and justifies it with reference to the functional (FR) and non-functional (NFR) requirements and the project constraints (CON). The selected stack is summarized in Section 8 and recorded in [architecture.md](architecture.md).
+This document records the key technical decisions of the project. For each decision it compares the selected technology with two or three reasonable alternatives against the same criteria, states the decision and justifies it with reference to the functional (FR) and non-functional (NFR) requirements and the project constraints (CON). The selected stack is summarized in Section 9 and recorded in [architecture.md](architecture.md).
 
-Six decisions are compared:
+Seven decisions are compared:
 
 | No. | Decision | Alternatives compared |
 |---|---|---|
@@ -26,6 +26,7 @@ Six decisions are compared:
 | D4 | Client–server interaction style | REST with OpenAPI, GraphQL, gRPC |
 | D5 | Recommendation and factor-identification engine | Hard-coded rules, declarative versioned rule base, general-purpose rule engine (Drools), machine-learning model |
 | D6 | Wearable data access | On-device platform APIs (Health Connect + HealthKit), commercial aggregator, vendor cloud APIs |
+| D7 | Role of AI (machine learning, large language models) | No AI, AI-assisted food logging, AI-generated recommendations |
 
 ### 1.2 Criteria
 
@@ -156,7 +157,7 @@ The alternatives are:
 
 **Decision: B, a declarative, versioned rule base executed by a Python evaluator inside the backend.** It meets every requirement on explanation and traceability (FR-23, FR-37, NFR-22, NFR-23) and allows the same rules to be verified on 200 synthetic profiles before the pilot (FR-38, NFR-24). Factor identification is part of the same engine: for each user, the evaluator scores the modifiable factors defined in the proposal (Section 2.3) against guideline targets and ranks the largest deviations, following the eNutri approach of targeting each user's lowest-scoring components [31].
 
-**ML decision: no ML model in the application.** Alternative D is excluded by NFR-25 and by the absence of local data [32], [33]. The `ml/` directory of the repository is used for the synthetic-profile generator, the constraint verification of the rule engine (SQ1) and the statistical analysis of the pilot. An explainable model trained on local pilot data is listed as future work.
+**ML decision: no ML model generates, ranks or changes recommendations.** Alternative D is excluded by NFR-25 and by the absence of local data [32], [33]. AI is used only as an input aid for food logging, outside the recommendation path (D7, Section 8). The `ml/` directory of the repository is used for the synthetic-profile generator, the constraint verification of the rule engine (SQ1) and the statistical analysis of the pilot. An explainable model trained on local pilot data is listed as future work.
 
 ---
 
@@ -178,7 +179,30 @@ Google Fit is not an option for a new project: developers cannot sign up for the
 
 ---
 
-## 8. Selected Stack
+## 8. D7. Role of AI
+
+**Requirements addressed:** FR-07, FR-23, FR-24, NFR-04, NFR-06, NFR-25, CON-01.
+
+The project team decided on 22 October 2026 that the recommendation engine stays rule-based (D5) and that AI is added where it helps the user without making recommendations opaque. The alternatives are:
+
+- **A. No AI component.**
+- **B. AI-assisted food logging:** the user describes a meal in free text (for example, "plov, one plate") or takes a photo; a multimodal language model returns candidate foods and portions **from the project's own food database**; the user confirms or corrects them, and only then are they saved as ordinary log entries (FR-07). The model never sees the user's profile and never produces advice.
+- **C. AI-generated recommendations:** a language model writes meal plans, activity advice or chat answers.
+
+| Criterion | A. No AI | B. AI-assisted food logging | C. AI-generated recommendations |
+|---|---|---|---|
+| C4. Privacy and data minimization | **Good.** No external processor | **Partial.** Meal text or photo is sent to an external model API without user identifiers; the app warns the user not to photograph people | **Weak.** The model needs the user's profile and history |
+| C5. Data residency | **Good** | **Partial.** A request without identifiers is not linked to a person; the legal reading is to be confirmed in the ethics application (DOA-24) | **Fails.** Personal health data processed abroad (NFR-06) |
+| C6. Explainable, versioned recommendations | **Good** | **Good.** Recommendations are still produced only by versioned rules (FR-23, NFR-25); AI output is an input that the user confirms | **Fails.** Outputs cannot be traced to a rule (NFR-25); generated menus contained energy, macronutrient and calcium errors [34] |
+| C7. Verification | **Good** | **Partial.** Model output is not deterministic; matching accuracy is measured on the local-food test list (DOA-16) before the pilot, and every entry passes the same hard-constraint checks (FR-24) | **Weak.** Cannot be verified exhaustively on synthetic profiles |
+| C8. Cost and licence | **Good** | **Partial.** Paid per request; the only exception to CON-01, kept small by sending short text and compressed photos | **Partial.** Paid per request, higher volume |
+| C9. Effort | **Good** | **Good.** One backend endpoint and one confirmation screen | **Weak.** Prompt design, safety filtering and evaluation of free-form advice |
+
+**Decision: B, AI-assisted food logging.** It applies AI to food logging, the most frequent and most effortful user action (FR-07), and leaves the recommendation path fully rule-based, so FR-23, FR-24 and NFR-25 hold unchanged. Alternative C is excluded by NFR-06 and NFR-25 [34]. The model provider is selected at implementation; the backend calls it through one interface so that it can be replaced, and the feature can be switched off without affecting any other function. In the control arm (FR-31) the feature is either available in both arms or in neither, so that it does not confound the comparison; this is fixed in the evaluation plan (DOA-12).
+
+---
+
+## 9. Selected Stack
 
 | Layer | Selected technology | Decision |
 |---|---|---|
@@ -188,34 +212,39 @@ Google Fit is not an option for a new project: developers cannot sign up for the
 | Wearable and phone data | Health Connect (Android) and HealthKit (iOS) through the `health` plugin | D6 |
 | Backend | FastAPI (Python) | D2 |
 | API | REST, OpenAPI description generated by FastAPI, Dart client generated from it | D4 |
-| Database | PostgreSQL, self-hosted on a server in Kazakhstan | D3 |
+| Database | PostgreSQL; during the pilot on a server in Kazakhstan | D3 |
 | Recommendation and factor-identification engine | Declarative, versioned rule base with a Python evaluator and hard-constraint checker | D5 |
 | Verification and analysis (`ml/`) | Python: synthetic-profile generator, constraint checks (SQ1), pilot statistics | D5 |
+| AI assistance | Multimodal language model API for food-logging suggestions, user-confirmed; provider selected at implementation | D7 |
+| Development hosting | AWS Free plan: Amazon RDS for PostgreSQL and a container host for FastAPI; synthetic and test data only | Section 9 |
 
 Two supporting choices follow from the decisions and are not compared separately:
 
 - **Notifications.** Activity prompts (FR-25) are shown as local notifications that the app schedules on the device from thresholds computed by the backend, so no third-party push SDK is required for the prototype (NFR-04). Because iOS keeps only the 64 most recently scheduled notifications [30], the app schedules a rolling window of prompts and refreshes it on each synchronization. Whether background step checks are frequent enough on iOS to trigger a prompt when activity falls below the threshold is tested in the prototype; remote push through the platform services is the fallback if NFR-15 is not met.
-- **Deployment.** The backend and database run as containers on one server located in Kazakhstan (NFR-06). The hosting option (a university server or a local provider) is to be agreed with the supervisor.
+- **Deployment in two stages.**
+  1. *Development (from October 2026 until before the first participant is enrolled):* the backend and a production-grade PostgreSQL database run on the AWS Free plan, which offers Amazon RDS for PostgreSQL on db.t3.micro and db.t4g.micro instances for up to six months and up to USD 200 in credits for new accounts [37]. Only synthetic and test data are stored there; no participant data exist before ethics approval (CON-04). AWS is preferred to Firebase for this stage because it runs the same PostgreSQL and FastAPI stack that will be used in the pilot, whereas Firebase would require a different, document-based data model and a rewrite before the move (D2, D3).
+  2. *Pilot (February–April 2027):* the same containers and database schema are deployed on a server located in Kazakhstan (NFR-06), a university server or a local provider, to be agreed with the supervisor. Participant data are stored only there. The move is scheduled after ethics approval (December 2026) and before enrollment.
 
 ---
 
-## 9. Assumptions and Risks
+## 10. Assumptions and Risks
 
 | ID | Assumption or risk | Affects | Mitigation |
 |---|---|---|---|
-| A1 | The mobile developer (Temirbulatov Yeraly) has or can quickly gain Flutter experience. | D1 | To confirm. Flutter was already planned in the Midterm proposal. |
-| A2 | The backend developer (Kadirbay Bibarys) is comfortable with Python. | D2 | To confirm. Fallback: NestJS backend with the rule engine as a separate Python service. |
+| A1 | Team capacity for Flutter and Python. | D1, D2 | Resolved on 22 October 2026: the team implements the code with an AI coding assistant (Claude Code), so the stack does not depend on individual experience. Code is reviewed through pull requests. |
+| A2 | The AWS Free plan covers development until the move to Kazakhstan. | Section 9 | The plan lasts up to six months [37]; the move is due before enrollment in February 2027. |
 | A3 | A server located in Kazakhstan is available for the pilot. | D2, D3, NFR-06 | Ask the supervisor about a university server; otherwise a local hosting provider. |
 | R1 | Localization rules are being revised. The Law on Personal Data and Their Protection requires storage in Kazakhstan [22]; a draft decree would relax this for most data categories [23]. | NFR-06 | Design for local storage now; the decision holds even if the rule is relaxed. |
 | R2 | The `health` plugin is maintained by a research group and may lag behind platform changes. | D6 | Pin the plugin version; fall back to platform channels for a missing data type [1]. |
 | R3 | Building and testing the iOS app requires a Mac with Xcode and an Apple developer account for HealthKit on a physical device. | D1, D6 | Confirm access to a Mac early; develop on Android first. |
 | R4 | The ML decision may be revisited after the pilot. | D5 | Rule base and data model allow an explainable auxiliary model to be added later without changing the recommendation path. |
+| R5 | AI food suggestions may be wrong for local dishes. | D7 | The user confirms every suggestion; accuracy is measured on the local-food test list before the pilot; the feature can be switched off. |
 
 ---
 
-## 10. Use in the Thesis
+## 11. Use in the Thesis
 
-The decisions in Sections 2–7 are summarized in Chapter 3 (System Design), and the selected stack in Section 8 forms the basis of the component diagram (pre-defense item 7). The ML decision (Section 6) is cited in the literature review discussion of data-driven factor identification.
+The decisions in Sections 2–8 are summarized in Chapter 3 (System Design), and the selected stack in Section 9 forms the basis of the component diagram (pre-defense item 7). The ML and AI decisions (Sections 6 and 8) are cited in the literature review discussion of data-driven factor identification.
 
 ---
 
@@ -292,3 +321,5 @@ The decisions in Sections 2–7 are summarized in Chapter 3 (System Design), and
 [35] R. De Croon, L. Van Houdt, N. N. Htun, G. Štiglic, V. Vanden Abeele, and K. Verbert, "Health recommender systems: Systematic review," *Journal of Medical Internet Research*, vol. 23, no. 6, Art. no. e18035, 2021, doi: 10.2196/18035.
 
 [36] Flutter, "Supported deployment platforms," Flutter documentation, Flutter 3.47. [Online]. Available: https://docs.flutter.dev/reference/supported-platforms (accessed Oct. 22, 2026).
+
+[37] Amazon Web Services, "Amazon RDS Free Tier." [Online]. Available: https://aws.amazon.com/rds/free/ (accessed Oct. 22, 2026).
