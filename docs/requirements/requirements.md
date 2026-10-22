@@ -5,7 +5,7 @@
 | **Project** | Development of a Mobile Recommender System for Identifying Obesity Factors and Personalized Weight Management |
 | **Document type** | Software requirements specification (pre-defense item 6) |
 | **YouTrack task** | [DOA-8](https://yeralytemir.youtrack.cloud/issue/DOA-8) |
-| **Version / date** | 1.0 draft, 22 October 2026 |
+| **Version / date** | 1.1 draft, 22 October 2026 (1.1: minimum OS versions and hosting from DOA-7) |
 | **Inputs** | [Project proposal](../proposal/proposal.md); [Literature review](../research/literature-review.md); [Existing system comparison](../research/existing-systems.md); [Assumptions register](../research/02-assumptions-register.md); [Relevance summary](../research/relevance-summary.md) |
 
 ---
@@ -215,7 +215,7 @@ Categories follow the product quality model of ISO/IEC 25010 [5]. Numeric thresh
 
 | ID | Requirement | Priority | Acceptance criteria | Verif. | Source |
 |---|---|---|---|---|---|
-| NFR-20 | The mobile client shall run on Android and iOS from one code base. The minimum supported OS versions are fixed in the technology comparison (DOA-7). | Must | The same release passes the core-scenario test (register, screen, log food, view recommendation) on one Android and one iOS device. | D | P (Sections 7.1, 8) |
+| NFR-20 | The mobile client shall run on Android and iOS from one code base. The minimum supported versions are Android 9 (API level 28) and iOS 15, as set in the [technology comparison](../architecture/technology-comparison.md) (DOA-7). | Must | The same release passes the core-scenario test (register, screen, log food, view recommendation) on one device with the minimum Android version and one with the minimum iOS version. | D | P (Sections 7.1, 8); DOA-7 |
 | NFR-21 | Health Connect and HealthKit access shall request only the data types needed (steps, heart rate), handle denied or revoked permission, and the application shall be fully usable without a wearable. | Must | **Given** permission is denied or revoked, **when** the app runs, **then** it does not crash and all non-wearable functions work; the permission request lists only steps and heart rate. | D | P (Sections 8, 9); E (L10); A9 |
 
 ### 4.6 Rule engine quality
@@ -306,7 +306,7 @@ These requirements are kept, because they also rest on the proposal or the liter
 
 | Task | What this specification needs from it |
 |---|---|
-| DOA-7 Technology comparison | Stack, minimum OS versions (NFR-20), hosting in Kazakhstan (NFR-06), decision on an auxiliary ML component (NFR-25) |
+| DOA-7 Technology comparison | Resolved: minimum OS versions Android 9 and iOS 15 (NFR-20); self-hosted server located in Kazakhstan, provider to be agreed with the supervisor (NFR-06). Open: decision on an ML component (NFR-25), awaiting team confirmation |
 | DOA-12 Evaluation plan | Definition of an active day, randomization method (FR-30), schedule of study measurements (FR-34) |
 | DOA-16 Rule base | Numeric targets, thresholds and tolerances referenced by FR-13, FR-15–FR-22, FR-24; local-food test list (FR-07) |
 | DOA-24 Ethics application | Retention period and deletion procedure (NFR-07), legal check of data residency (NFR-06) |
