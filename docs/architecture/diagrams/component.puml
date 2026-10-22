@@ -1,0 +1,119 @@
+@startuml component
+' Component diagram, draft (DOA-9).
+' Components of the mobile client, the backend, the database and the
+' verification code in ml/, with the external systems from the context diagram.
+!include style.iuml
+title Component Diagram (draft)
+
+package "Mobile client (Flutter, Android 9+ / iOS 15+)" as MOB {
+  component "UI screens\n<size:10>onboarding, log, factors, plan,</size>\n<size:10>Why?, progress, check-in, settings</size>" as UI
+  component "App state and arm mode\n<size:10>intervention / control flag (FR-31)</size>" as STATE
+  component "Localization\n<size:10>ARB files KK / RU / EN</size>" as L10N
+  component "Local store\n<size:10>SQLite (drift), offline queue</size>" as LOCAL
+  component "Sync service\n<size:10>Dart client generated</size>\n<size:10>from OpenAPI</size>" as SYNC
+  component "Health data adapter\n<size:10>`health` plugin</size>" as HADP
+  component "Prompt scheduler\n<size:10>flutter_local_notifications</size>" as PROMPT
+  component "Engagement event logger" as EVLOG
+}
+
+package "Backend (FastAPI, Python)" as BE {
+  component "REST API\n<size:10>OpenAPI, TLS, auth tokens,</size>\n<size:10>role-based access</size>" as API
+  component "Accounts and consent" as ACC
+  component "Screening and enrollment\n<size:10>eligibility rules, randomization</size>" as ENR
+  component "Logging service\n<size:10>food, weight, waist, steps,</size>\n<size:10>heart rate, check-ins</size>" as LOGS
+  component "Food database service\n<size:10>food composition table,</size>\n<size:10>local dishes</size>" as FOOD
+  component "AI food-logging adapter\n<size:10>one replaceable interface;</size>\n<size:10>switch set by the RA</size>" as AIA
+
+  package "Rule engine" as RE {
+    component "Rule loader\n<size:10>versioned rule definitions</size>" as RLOAD
+    component "Factor scorer\n<size:10>deviation scores, ranking</size>" as FSC
+    component "Recommendation generator\n<size:10>targets, plan, explanation</size>" as RGEN
+    component "Hard-constraint checker\n<size:10>blocks unsafe plans, fallback</size>" as HCC
+  }
+
+  component "Scheduled jobs\n<size:10>weekly target update,</size>\n<size:10>prompt thresholds</size>" as JOBS
+  component "Study administration\n<size:10>enrollment view, measurements,</size>\n<size:10>adverse events, withdrawals</size>" as ADM
+  component "Export service\n<size:10>pseudonymized CSV +</size>\n<size:10>data dictionary</size>" as EXP
+  component "Data access layer\n<size:10>repositories, encryption at rest</size>" as DAL
+}
+
+database DB [
+  **PostgreSQL**
+  <size:10>AWS RDS: development, synthetic data only</size>
+  <size:10>server in Kazakhstan: pilot (NFR-06)</size>
+  ----
+  identity data (name, e-mail), kept apart
+  research data (pseudonymous study ID)
+  rule versions and recommendation traces
+  engagement events
+]
+
+package "Verification and analysis (ml/, Python)" as ML {
+  component "Synthetic profile generator\n<size:10>200 profiles</size>" as SYN
+  component "Batch verification\n<size:10>SQ1 report (FR-38)</size>" as BV
+  component "Pilot statistics" as STATS
+}
+
+component "Research admin console\n<size:10>web; technology chosen in DOA-17</size>" as CONSOLE
+
+rectangle "Health Connect /\nHealthKit" as HEALTH
+cloud "Multimodal AI service" as AI
+rectangle "Mobile OS\nnotifications" as OS
+
+' Mobile client internals
+UI --> STATE
+UI --> L10N
+STATE --> LOCAL
+UI --> EVLOG
+EVLOG --> LOCAL
+LOCAL --> SYNC
+HADP --> LOCAL
+PROMPT --> OS
+STATE --> PROMPT
+HADP --> HEALTH
+
+' Client to backend
+SYNC --> API : REST / HTTPS (JSON)
+
+' Backend internals
+API --> ACC
+API --> ENR
+API --> LOGS
+API --> FOOD
+API --> AIA
+API --> RGEN
+API --> ADM
+API --> EXP
+AIA --> FOOD
+AIA --> AI : meal text or photo,\nno user identifiers
+RGEN --> FSC
+RGEN --> HCC
+FSC --> RLOAD
+RGEN --> RLOAD
+HCC --> RLOAD
+JOBS --> RGEN
+ENR --> RLOAD : eligibility rules
+
+' Persistence: every backend service reads and writes through the data access layer
+ACC --> DAL
+ENR --> DAL
+LOGS --> DAL
+FOOD --> DAL
+RGEN --> DAL : recommendation\n+ rule trace
+RLOAD --> DAL
+ADM --> DAL
+EXP --> DAL
+DAL --> DB
+
+' Administration and verification
+CONSOLE --> API
+SYN --> BV
+BV --> RE : same Python rule\nengine package
+STATS ..> EXP : reads CSV export
+
+legend bottom
+  Draft for pre-defense 1. Recommendations come only from the rule engine; the AI adapter
+  has no access to profiles, factor scores or recommendations (NFR-25).
+  Identity data are stored apart from research data (NFR-03).
+endlegend
+@enduml

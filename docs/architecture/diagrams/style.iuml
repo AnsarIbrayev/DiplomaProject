@@ -1,0 +1,30 @@
+' Common style for all project diagrams (DOA-9, DOA-10).
+' Neutral colours so that the exports print well in the thesis.
+skinparam shadowing false
+skinparam dpi 150
+skinparam defaultFontName "DejaVu Sans"
+skinparam defaultFontSize 12
+skinparam roundCorner 8
+skinparam ArrowColor #333333
+skinparam ArrowFontSize 10
+skinparam ArrowFontColor #333333
+skinparam ActorBorderColor #333333
+skinparam ActorBackgroundColor #FFFFFF
+skinparam UsecaseBorderColor #333333
+skinparam UsecaseBackgroundColor #F5F7FA
+skinparam RectangleBorderColor #333333
+skinparam RectangleBackgroundColor #FFFFFF
+skinparam PackageBorderColor #555555
+skinparam PackageBackgroundColor #FFFFFF
+skinparam ComponentBorderColor #333333
+skinparam ComponentBackgroundColor #F5F7FA
+skinparam DatabaseBorderColor #333333
+skinparam DatabaseBackgroundColor #EEF2F7
+skinparam CloudBorderColor #333333
+skinparam CloudBackgroundColor #FFFFFF
+skinparam NoteBorderColor #888888
+skinparam NoteBackgroundColor #FFFBE6
+skinparam NoteFontSize 10
+skinparam legendBackgroundColor #FFFFFF
+skinparam legendBorderColor #888888
+skinparam legendFontSize 10
