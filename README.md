@@ -37,6 +37,10 @@
 └── mobile/              мобильное приложение
 ```
 
+## Прототип
+
+Кликабельный прототип мобильного приложения (Flutter): код в [`mobile/`](mobile/), экраны, скриншоты и инструкция запуска в [docs/prototype](docs/prototype/README.md).
+
 ## Управление задачами
 
 Задачи ведутся в YouTrack, проект DOA: https://yeralytemir.youtrack.cloud/projects/DOA

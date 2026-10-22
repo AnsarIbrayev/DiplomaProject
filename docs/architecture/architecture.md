@@ -17,6 +17,10 @@ Selected and justified in [technology-comparison.md](technology-comparison.md) (
 | ML-модель | No model generates recommendations (NFR-25); `ml/` holds the synthetic-profile generator, SQ1 verification and pilot statistics | D5 |
 | AI | AI-assisted food logging through a language model API, user-confirmed | D7 |
 
+## Прототип (DOA-11)
+
+Clickable Flutter prototype in [`mobile/`](../../mobile/), described in [docs/prototype](../prototype/README.md). No backend yet: state is in memory, data are synthetic, the rule base is a Dart stand-in (rule IDs, versions and sources as planned for DOA-16), interface texts in ARB files for KK/RU/EN. 23 automated tests (`flutter test`).
+
 ## Компоненты
 
 ## Модель данных
