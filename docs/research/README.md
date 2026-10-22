@@ -21,12 +21,15 @@ The committee asks *"what evidence informs the requirements and whether verified
 
 ## Plan to complete DOA-4
 
+Status on 22 October 2026: everything that does not depend on interview data is complete, including the draft summary with desk-research findings ([relevance-summary.md](relevance-summary.md)). The interviews remain.
+
 | When | Step | Who |
 |---|---|---|
-| 22 Oct | Confirm with the supervisor that anonymised requirements interviews need no formal ethics application (3.5). Send recruitment messages (3.3) and the expert request. | Ansar |
-| 22–23 Oct | Conduct 3–4 user interviews and 1 expert interview; fill in a record for each within 24 hours. | Ansar (note-taker: a team member if available) |
-| 23 Oct | Analyse (6.1), update the assumptions register, write the summary (6.2), prepare the slide (6.6). | Ansar; a second team member checks steps 3–5 |
-| 23 Oct | Pull request with the records and summary; review by a team member; add the PR link to DOA-4. | Ansar, reviewer |
+| 22 Oct, today | Ask the supervisor whether anonymised requirements interviews need a formal ethics application (03, Section 3.5). | Ansar |
+| 22 Oct, today | Send the recruitment messages (03, Section 3.3) to 6–8 people to get 3–4 interviews, and the expert message to 1–2 specialists. Fill the quota in 6.2, part 2 (P1–P4, X1). | Ansar |
+| 22–23 Oct | Conduct the interviews (30–40 min each, online is fine) using 04. Write notes in the template (05) within 24 hours. | Ansar; a team member as note-taker if available |
+| 23 Oct | Send the notes for analysis. Then fill in the records in `interviews/`, update the assumptions register, and complete the pending parts of the summary and slide. | Ansar and Claude |
+| 23 Oct | Pull request with the results, approval, merge, and close DOA-4. | Ansar |
 
 ## Acceptance criteria for DOA-4
 
