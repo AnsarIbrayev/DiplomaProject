@@ -5,14 +5,14 @@
 | **Project** | Development of a Mobile Recommender System for Identifying Obesity Factors and Personalized Weight Management |
 | **Document type** | Project management and risks (pre-defense item 10) |
 | **YouTrack task** | [DOA-13](https://yeralytemir.youtrack.cloud/issue/DOA-13) |
-| **Version / date** | 1.0, 22 October 2026 |
-| **Inputs** | [Project proposal](proposal/proposal.md) (Sections 1, 9, 10); [Requirements specification](requirements/requirements.md) (Section 5, constraints CON-01 – CON-04); [Technology comparison](architecture/technology-comparison.md) (Section 10, assumptions and risks); [Evaluation plan](evaluation/evaluation-plan.md) (Sections 7–11); YouTrack project DOA (tasks DOA-1 – DOA-27, state on 22 October 2026) |
+| **Version / date** | 1.1, 22 October 2026 (1.0 approved by Ansar Ibrayev; 1.1: January 2027 tasks DOA-28 – DOA-31 added) |
+| **Inputs** | [Project proposal](proposal/proposal.md) (Sections 1, 9, 10); [Requirements specification](requirements/requirements.md) (Section 5, constraints CON-01 – CON-04); [Technology comparison](architecture/technology-comparison.md) (Section 10, assumptions and risks); [Evaluation plan](evaluation/evaluation-plan.md) (Sections 7–11); YouTrack project DOA (tasks DOA-1 – DOA-31, state on 22 October 2026) |
 
 ---
 
 ## Summary
 
-The project runs from 15 October 2026 to 31 May 2027 and is planned as 27 tasks in the YouTrack project DOA. Each task has an assignee, a priority, a start date and a deadline. Work moves through four stages: pre-defense 1 (October 2026), development and verification (November–December 2026), preparation and pilot study (January–April 2027), and analysis and thesis (May 2027). The critical path runs through the rule base, the rule engine, its verification and the ethics approval to the pilot study, because no participant can be enrolled before all of them are complete (evaluation plan, Section 7).
+The project runs from 15 October 2026 to 31 May 2027 and is planned as 31 tasks in the YouTrack project DOA. Each task has an assignee, a priority, a start date and a deadline. Work moves through four stages: pre-defense 1 (October 2026), development and verification (November–December 2026), preparation and pilot study (January–April 2027), and analysis and thesis (May 2027). The critical path runs through the rule base, the rule engine, its verification and the ethics approval to the pilot study, because no participant can be enrolled before all of them are complete (evaluation plan, Section 7).
 
 The risk register (Section 6) lists 17 risks. Seven are rated high: a delay of the ethics approval, slow recruitment, drop-out in the pilot, the availability of a server in Kazakhstan for participant data, the compressed development schedule in November 2026, unverified user assumptions, and unsafe or wrong recommendations.
 
@@ -112,7 +112,7 @@ Dates are taken from the Start Date and Due Date fields of the YouTrack tasks.
 | M2 | Rule base, backend, rule engine and mobile client implemented | 30 Nov 2026 | DOA-16 – DOA-21 | Merged PRs; rule base document; working build on Android |
 | M3 | Control-arm mode and rule-engine verification (SQ1) | 15 Dec 2026 | DOA-22, DOA-23 | `docs/evaluation/verification-report.md`: 0 hard-constraint violations |
 | M4 | Ethics application decided | 31 Dec 2026 | DOA-24 | Decision recorded in `docs/ethics/` without personal data |
-| M5 | Go/no-go before enrollment | Jan 2027 | DOA-22, DOA-25 (evaluation plan, Sections 7, 10) | All 10 go/no-go criteria met, including the server in Kazakhstan and the usability test |
+| M5 | Go/no-go before enrollment | 29 Jan 2027 | DOA-28 – DOA-31 (evaluation plan, Sections 7, 10) | All 10 go/no-go criteria met, including the server in Kazakhstan and the usability test |
 | M6 | **Pre-defense 2** | Date set by AITU (not yet announced) | DOA-27 | Tag `pre-defense-2` |
 | M7 | Pilot study completed (12 weeks) | 1 Feb – 30 Apr 2027 | DOA-25 | `docs/evaluation/pilot-log.md`; CONSORT-style flow |
 | M8 | Analysis of H1–H3, feasibility and safety | 1 – 15 May 2027 | DOA-26 | Analysis scripts in `ml/`; results tables |
@@ -132,11 +132,14 @@ Dates are taken from the Start Date and Due Date fields of the YouTrack tasks.
 | 16 Nov – 15 Dec 2026 | DOA-22 Control-arm mode | Bibarys |
 | | DOA-23 Rule-engine verification on 200 synthetic profiles (SQ1) | Ansar |
 | 1 – 31 Dec 2026 | DOA-24 Ethics application | Ansar |
+| 4 – 22 Jan 2027 | DOA-28 Acceptance tests and notification delivery test; DOA-30 Move to the server in Kazakhstan | Bibarys |
+| | DOA-29 Pre-pilot usability test (SUS) | Ansar |
+| 25 – 29 Jan 2027 | DOA-31 Go/no-go review and plan freeze | Ansar |
 | 1 Feb – 30 Apr 2027 | DOA-25 Pilot study | Ansar |
 | 1 – 15 May 2027 | DOA-26 Data analysis | Ansar |
 | 1 Nov 2026 – 31 May 2027 | DOA-27 Thesis text and final pre-defense | Ansar (whole team writes) |
 
-January 2027 has no separate YouTrack task. According to the evaluation plan (Section 10) it holds the acceptance tests, the usability test, the move to the server in Kazakhstan and the go/no-go review. Separate tasks for these activities should be created before December 2026 (Section 7, item 4).
+The January 2027 tasks DOA-28 – DOA-31 follow the evaluation plan (Section 10). Their dates are a team proposal of 22 October 2026 and may be moved within January, as long as DOA-31 ends before enrollment starts.
 
 ---
 
@@ -160,10 +163,14 @@ These «depends on» links are set in YouTrack and drive the Gantt chart.
 | DOA-21 Wearable integration | DOA-19 Mobile logging |
 | DOA-22 Control-arm mode | DOA-17 Backend |
 | DOA-23 Verification (SQ1) | DOA-18 Rule engine service |
-| DOA-25 Pilot study | DOA-22 Control-arm mode, DOA-23 Verification, DOA-24 Ethics approval |
+| DOA-28 Acceptance tests | DOA-20 Recommendations screen, DOA-22 Control-arm mode |
+| DOA-29 Usability test | DOA-24 Ethics approval |
+| DOA-30 Server in Kazakhstan | DOA-17 Backend |
+| DOA-31 Go/no-go review | DOA-23 Verification, DOA-28 Acceptance tests, DOA-29 Usability test, DOA-30 Server in Kazakhstan |
+| DOA-25 Pilot study | DOA-22 Control-arm mode, DOA-23 Verification, DOA-24 Ethics approval, DOA-31 Go/no-go review |
 | DOA-26 Data analysis | DOA-25 Pilot study |
 
-**Critical path to the pilot:** DOA-16 → DOA-18 → DOA-23 → DOA-25 → DOA-26 → DOA-27, with DOA-24 (ethics) as a parallel precondition of DOA-25. A delay on this path moves the pilot, and the pilot cannot be shortened below 12 weeks without changing the study design.
+**Critical path to the pilot:** DOA-16 → DOA-18 → DOA-23 → DOA-31 → DOA-25 → DOA-26 → DOA-27, with DOA-24 (ethics) → DOA-29 (usability test) as a parallel precondition of DOA-31. A delay on this path moves the pilot, and the pilot cannot be shortened below 12 weeks without changing the study design.
 
 ### 4.2 External dependencies
 
@@ -204,7 +211,7 @@ Each risk is rated by the team on two three-level scales. The ratings are the te
 | R01 | Ethics approval is delayed or requires major changes, so enrollment cannot start in February 2027. | Ethics | 2 | 3 | **6** | Submit early in December 2026; ask the supervisor about the required documents and committee schedule in November; reuse the consent and data-protection text already written in the evaluation plan (Section 8). | Shorten recruitment, not the 12-week intervention; if the start moves past March 2027, discuss with the supervisor a smaller sample reported as a feasibility study. | Ansar | DOA-24, DOA-25 |
 | R02 | Slow recruitment: fewer than 60 eligible participants are randomized. | Pilot | 2 | 3 | **6** | Recruit through AITU channels, posters and social media from the day of approval (proposal, Section 9); monitor the recruitment rate weekly. | Report the actual sample and recruitment rate as feasibility outcomes; the study is a pilot and is not powered for confirmation (evaluation plan, Section 6.3). | Ansar | DOA-25 |
 | R03 | Drop-out and missing measurements at weeks 6 and 12. | Pilot | 3 | 2 | **6** | Study reminders, ±7-day visit windows, weekly check-in (evaluation plan, Sections 6.5, 9). | Intention-to-treat analysis with multiple imputation and complete-case comparison (evaluation plan, Section 6.8). | Ansar | DOA-25, DOA-26 |
-| R04 | No server located in Kazakhstan is available in time, so participant data cannot be stored as NFR-06 requires. | Legal, infrastructure | 2 | 3 | **6** | Ask the supervisor about a university server in November 2026; in parallel, list local hosting providers; keep the same containers and schema as on AWS so the move is a redeployment. | Go/no-go criterion 5 is not met: enrollment waits until the server is ready. | Bibarys | DOA-17, DOA-25 |
+| R04 | No server located in Kazakhstan is available in time, so participant data cannot be stored as NFR-06 requires. | Legal, infrastructure | 2 | 3 | **6** | Ask the supervisor about a university server in November 2026; in parallel, list local hosting providers; keep the same containers and schema as on AWS so the move is a redeployment. | Go/no-go criterion 5 is not met: enrollment waits until the server is ready. | Bibarys | DOA-30, DOA-25 |
 | R05 | Development schedule is compressed: rule base, backend, rule engine and the mobile client are all due on 30 November 2026. | Schedule | 3 | 2 | **6** | Weekly progress check in YouTrack; Must requirements first (MoSCoW); code written with the AI coding assistant and checked by tests in CI; Android first (R12). | Move Should and Could requirements after the pilot; keep the 15 December verification date because it is on the critical path. | Ansar | DOA-16 – DOA-21 |
 | R06 | Legal rules on personal-data localization and cross-border transfer change or are interpreted differently for a university prototype. | Legal | 2 | 2 | 4 | Design for storage in Kazakhstan regardless of the outcome (technology comparison, R1); confirm the interpretation with the supervisor and the ethics committee (requirements, Section 7). | Follow the stricter reading. | Ansar | DOA-24 |
 | R07 | Sending meal text or photos to an external AI service is not approved (cross-border transfer, photos with faces or metadata). | Ethics, legal | 2 | 1 | 2 | Safeguards in the ethics application: no identifiers, metadata removal, opt-out of retention, separate consent (evaluation plan, Section 8.4). | Switch FR-40 off in both arms; manual logging remains complete. | Ansar | DOA-24 |
@@ -242,7 +249,7 @@ L = likelihood, I = impact (Section 5).
 1. **Pre-defense 2 date.** Not yet announced by AITU; the milestone is added to YouTrack when it is known.
 2. **Server in Kazakhstan** (R04). Ask the supervisor whether a university server can host the pilot database.
 3. **Ethics committee schedule** (R01). Ask the supervisor which documents are needed and when the committee meets.
-4. **January 2027 tasks.** Create YouTrack tasks for the acceptance tests, the usability test, the move to the server in Kazakhstan and the go/no-go review (evaluation plan, Section 10).
+4. **January 2027 tasks (resolved, 22 October 2026).** Created in YouTrack as DOA-28 – DOA-31 with «depends on» links (Section 3.1).
 5. **Use of AI tools** (R17). Confirm the AITU rules on disclosing the use of an AI coding assistant.
 
 ---
@@ -252,3 +259,4 @@ L = likelihood, I = impact (Section 5).
 | Version | Date | Change |
 |---|---|---|
 | 1.0 | 22 Oct 2026 | First version for pre-defense 1 |
+| 1.1 | 22 Oct 2026 | January 2027 tasks DOA-28 – DOA-31 added to milestones, schedule and dependencies |
