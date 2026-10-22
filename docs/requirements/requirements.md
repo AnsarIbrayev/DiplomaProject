@@ -5,7 +5,7 @@
 | **Project** | Development of a Mobile Recommender System for Identifying Obesity Factors and Personalized Weight Management |
 | **Document type** | Software requirements specification (pre-defense item 6) |
 | **YouTrack task** | [DOA-8](https://yeralytemir.youtrack.cloud/issue/DOA-8) |
-| **Version / date** | 1.1 draft, 22 October 2026 (1.1: minimum OS versions and hosting from DOA-7) |
+| **Version / date** | 1.2 draft, 22 October 2026 (1.1: minimum OS versions and hosting from DOA-7; 1.2: Kazakh, Russian and English as equal Must languages, FR-39) |
 | **Inputs** | [Project proposal](../proposal/proposal.md); [Literature review](../research/literature-review.md); [Existing system comparison](../research/existing-systems.md); [Assumptions register](../research/02-assumptions-register.md); [Relevance summary](../research/relevance-summary.md) |
 
 ---
@@ -162,7 +162,13 @@ Acceptance criteria are written as Given/When/Then statements or as a measurable
 | FR-37 | The system shall store the rule base as versioned rules, each with its inputs, output, constraint and evidence source. | Must | **Given** the rule base, **when** it is inspected, **then** every rule has all four fields and a version; changing a rule creates a new version and old recommendations keep the version that produced them. | I, T | P (O1, Section 8) |
 | FR-38 | The system shall provide a batch verification mode that generates plans for a set of synthetic profiles and reports every hard-constraint violation. | Must | **Given** 200 synthetic profiles spanning age, sex, BMI and activity level, **when** batch verification runs, **then** a report lists, per profile, the plan and each constraint result (pass or fail with value). | T | P (O2, SQ1); E (L5) |
 
-### 3.10 Won't (this release)
+### 3.10 Language
+
+| ID | Requirement | Priority | Acceptance criteria | Verif. | Source |
+|---|---|---|---|---|---|
+| FR-39 | The system shall let the user switch the interface language between Kazakh, Russian and English at any time in the settings, without reinstalling the application or losing data. | Must | **Given** a user with logged data, **when** they switch the language in the settings, **then** all screens, recommendations, explanations (FR-23) and notifications appear in the selected language without restarting the application, and all data remain unchanged. | D | E (G3, existing systems C2); team decision 22.10.2026 |
+
+### 3.11 Won't (this release)
 
 For completeness, the following features are agreed as out of scope (proposal, Section 7.2; existing-system comparison, Section 5.2): barcode, photo or voice food logging; recipes and social features; human coaching or chat; recommendations from large language models or other opaque models; app-store release and payments; integration with clinical information systems.
 
@@ -209,7 +215,7 @@ Categories follow the product quality model of ISO/IEC 25010 [5]. Numeric thresh
 |---|---|---|---|---|---|
 | NFR-17 | The application shall reach a mean SUS score of at least 68 in a pre-pilot usability test with at least 5 users. | Should | Mean SUS ≥ 68, the average SUS score in published benchmarks [3], [4]; the score is also reported at week 12 of the pilot (FR-33). | T | P (O3); R [3], [4]; A2 |
 | NFR-18 | Screens shall meet selected WCAG 2.2 level AA criteria: text contrast of at least 4.5:1, touch targets of at least 24 × 24 CSS pixels (device-independent pixels on mobile), and support for system text scaling. | Should | Inspection of each screen of the prototype with a contrast checker; no failure on these three criteria. | I | R [6] (SC 1.4.3, 1.4.4, 2.5.8) |
-| NFR-19 | The interface shall be available in Russian (Must) and English (Should); Kazakh is a Could and remains an open decision (Section 7). All user-facing text, including explanations (FR-23), shall be stored in resource files, not in code. | Must | All screens show complete Russian text; inspection finds no hard-coded user-facing strings. | I, D | E (G3, existing systems C2); A5 |
+| NFR-19 | The interface shall be fully available in Kazakh, Russian and English, with equal priority and equal completeness. All user-facing text, including explanations (FR-23) and notifications, shall be stored in resource files, not in code. | Must | An automated check finds the same set of text keys in all three language files with no empty value; inspection finds no hard-coded user-facing strings. | T, I | E (G3, existing systems C2); team decision 22.10.2026 |
 
 ### 4.5 Compatibility and portability
 
@@ -261,7 +267,7 @@ Categories follow the product quality model of ISO/IEC 25010 [5]. Numeric thresh
 | Eligibility and safety (proposal, Section 3) | FR-04, FR-05, FR-29 |
 | **G1** No explanation of recommendations | FR-14, FR-23, NFR-23 |
 | **G2** No joint recommendations, no factor ranking | FR-13, FR-14, FR-15–FR-22 |
-| **G3** No local language, foods and activity data together | FR-07, FR-11, NFR-19 |
+| **G3** No local language, foods and activity data together | FR-07, FR-11, FR-39, NFR-19 |
 | **G4** No evidence against self-monitoring | FR-30, FR-31 |
 
 ### 6.2 Literature limitations to requirements
@@ -280,9 +286,9 @@ Categories follow the product quality model of ISO/IEC 25010 [5]. Numeric thresh
 | L12 Energy-only optimization | FR-16, FR-20, FR-21 |
 | L13 Factor models depend on non-local data | FR-13, NFR-25 |
 | L15 Unsupervised use unsafe for some people | FR-04, FR-05, FR-29 |
-| L16 No studies from Central Asia | FR-07, NFR-19 |
+| L16 No studies from Central Asia | FR-07, FR-39, NFR-19 |
 
-L7 (no human coaching) and L8 (12-week follow-up) are design decisions of the study and appear in Section 3.10 and in the evaluation plan, not as system requirements. L14 (cost of precision nutrition) is covered by the scope: only smartphone data and an optional wearable.
+L7 (no human coaching) and L8 (12-week follow-up) are design decisions of the study and appear in Section 3.11 and in the evaluation plan, not as system requirements. L14 (cost of precision nutrition) is covered by the scope: only smartphone data and an optional wearable.
 
 ### 6.3 Requirements that depend on unverified assumptions
 
@@ -292,7 +298,7 @@ These requirements are kept, because they also rest on the proposal or the liter
 |---|---|---|
 | A2 Users abandon apps because of logging effort | FR-08, NFR-12, NFR-17 | Priority of custom foods and fast logging |
 | A4 Explanations increase trust | FR-14, FR-23 | Form of the explanation, not its presence (presence is required by G1 and L4) |
-| A5 Local foods missing in databases | FR-07, FR-17, NFR-19 | Size of the local-food list |
+| A5 Local foods missing in databases | FR-07, FR-17 | Size of the local-food list |
 | A6 Users want to see which factors matter | FR-13, FR-14 | Presentation of the factor ranking |
 | A7 Gradual targets from own baseline preferred | FR-12, FR-18 | Size of the weekly increase |
 | A8 Few, well-timed reminders are accepted | FR-21, FR-25, FR-26 | The limit of 3 prompts per day (team-set) |
@@ -316,7 +322,7 @@ These requirements are kept, because they also rest on the proposal or the liter
 
 ## 7. Open Questions
 
-1. **Kazakh interface (NFR-19).** The existing-system comparison found Kazakh only in TayQazan Tracker (G3). Adding it increases translation and testing effort. Current proposal: Russian Must, English Should, Kazakh Could. Decision by the team.
+1. **Interface languages (resolved, 22 October 2026).** The team decided that Kazakh, Russian and English are equal Must languages with an in-app switch (FR-39, NFR-19). The existing-system comparison found Kazakh only in TayQazan Tracker (G3). Translations of rule explanations need a review by a native speaker of each language before the pilot.
 2. **Auxiliary ML component (NFR-25).** Decided in the technology comparison (DOA-7). NFR-25 already restricts any such component to an input of the rule engine.
 3. **Data residency (NFR-06).** Applicability of Article 12(2) of the Law on Personal Data to a university research prototype is to be confirmed with the supervisor and the ethics committee.
 4. **Team-set thresholds** (prompt limit, response times, availability, notification delay). They are engineering targets and may be adjusted after the prototype is measured; any change is recorded in this document's version history.
@@ -327,7 +333,7 @@ These requirements are kept, because they also rest on the proposal or the liter
 
 | Type | Must | Should | Could | Total |
 |---|---|---|---|---|
-| Functional | 27 | 10 | 1 | 38 |
+| Functional | 28 | 10 | 1 | 39 |
 | Non-functional | 20 | 8 | 0 | 28 |
 
 Every Must requirement has a testable acceptance criterion and a verification method; these criteria are reused as test cases in the verification and evaluation plan (DOA-12).
