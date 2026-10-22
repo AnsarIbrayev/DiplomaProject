@@ -31,28 +31,28 @@ It covers the core user path of the proposal: **onboarding and screening → log
 
 ## 2. Screens and use cases
 
-Screenshots: Android-size viewport (390 × 844 dp), Russian interface unless stated. Use-case names follow the requirements; their IDs must match the use case diagram of DOA-10 when it is drawn.
+Screenshots: Android-size viewport (390 × 844 dp), Russian interface unless stated. Use-case IDs (UC-xx) refer to the [use case diagram and specification](../architecture/use-cases.md) (DOA-10).
 
 | # | Screen | Screenshot | Use case | Requirements shown |
 |---|---|---|---|---|
-| 1 | Welcome and language choice | [01-language](screens/01-language.png) | Choose interface language | FR-39, NFR-19 |
-| 2 | Study information and consent | [02-consent](screens/02-consent.png) | Give informed consent | FR-02 |
-| 3 | Screening questionnaire (age, height, weight, BMI, exclusions, PAR-Q+) | [03-screening](screens/03-screening.png) | Complete eligibility screening | FR-04, FR-06 |
-| 4 | Eligible: baseline week and study group | [04-eligible](screens/04-eligible.png) | Complete eligibility screening; be assigned to a study arm | FR-04, FR-12, FR-30 |
-| 5 | Not eligible: referral to clinical care | [05-ineligible](screens/05-ineligible.png) | Receive referral | FR-05 |
-| 6 | Today (dashboard): intake and steps against targets, main factor, first recommendation, prompt example, check-in reminder | [06-today](screens/06-today.png) | View daily status | FR-14, FR-18, FR-22, FR-25, FR-28 |
-| 7 | Food and weight log: search, today's entries, weight and waist | [07-log](screens/07-log.png) | Log food; log weight and waist | FR-07, FR-09 |
-| 8 | Describe a meal: proposal and confirmation before saving | [08-ai-logging](screens/08-ai-logging.png) | Log food with AI assistance | FR-40 (simulated) |
-| 9 | Factors: ranked by deviation with value, target and rule ID | [09-factors](screens/09-factors.png) | View own obesity-related factors | FR-13, FR-14 |
-| 10 | Plan: recommendations ordered by factors; hard-constraint checks | [10-plan](screens/10-plan.png) | View recommendations | FR-15, FR-16, FR-18, FR-20, FR-21, FR-22, FR-24 |
-| 11 | "Why?": reason, rule ID and version, inputs, evidence source | [11-why](screens/11-why.png) | View explanation of a recommendation | FR-23, FR-37 |
-| 12 | Progress: weight trend, steps with baseline week and target, energy per day | [12-progress](screens/12-progress.png) | View progress | FR-27 |
-| 13 | Weekly check-in | [13-checkin](screens/13-checkin.png) | Complete weekly safety check-in | FR-28 |
-| 14 | Check-in with a reported problem: activity paused, referral | [14-referral](screens/14-referral.png) | Complete weekly safety check-in; receive referral | FR-29 |
-| 15 | Settings: language, study group (demo switch), active hours, rule list | [15-settings](screens/15-settings.png) | Change settings | FR-26, FR-37, FR-39 |
-| 16 | Control arm: same app, tracking only, no Factors and Plan tabs | [16-control-today](screens/16-control-today.png) | Use the app in self-monitoring mode | FR-31 |
-| 17 | Plan in Kazakh | [17-plan-kk](screens/17-plan-kk.png) | Choose interface language | FR-39, NFR-19 |
-| 18 | Plan in English | [18-plan-en](screens/18-plan-en.png) | Choose interface language | FR-39, NFR-19 |
+| 1 | Welcome and language choice | [01-language](screens/01-language.png) | UC-05 Choose interface language | FR-39, NFR-19 |
+| 2 | Study information and consent | [02-consent](screens/02-consent.png) | UC-02 Give informed consent | FR-02 |
+| 3 | Screening questionnaire (age, height, weight, BMI, exclusions, PAR-Q+) | [03-screening](screens/03-screening.png) | UC-03 Complete eligibility screening | FR-04, FR-06 |
+| 4 | Eligible: baseline week and study group | [04-eligible](screens/04-eligible.png) | UC-03 Complete eligibility screening; UC-06 Be assigned to a study arm | FR-04, FR-12, FR-30 |
+| 5 | Not eligible: referral to clinical care | [05-ineligible](screens/05-ineligible.png) | UC-04 Receive referral to clinical care | FR-05 |
+| 6 | Today (dashboard): intake and steps against targets, main factor, first recommendation, prompt example, check-in reminder | [06-today](screens/06-today.png) | Daily overview: UC-13 View progress, UC-17 View ranked lifestyle factors, UC-18 View recommendations, UC-20 Receive activity prompt, UC-14 reminder | FR-14, FR-18, FR-22, FR-25, FR-28 |
+| 7 | Food and weight log: search, today's entries, weight and waist | [07-log](screens/07-log.png) | UC-08 Log food; UC-11 Log weight and waist | FR-07, FR-09 |
+| 8 | Describe a meal: proposal and confirmation before saving | [08-ai-logging](screens/08-ai-logging.png) | UC-09 Log food with AI assistance | FR-40 (simulated) |
+| 9 | Factors: ranked by deviation with value, target and rule ID | [09-factors](screens/09-factors.png) | UC-17 View ranked lifestyle factors | FR-13, FR-14 |
+| 10 | Plan: recommendations ordered by factors; hard-constraint checks | [10-plan](screens/10-plan.png) | UC-18 View recommendations | FR-15, FR-16, FR-18, FR-20, FR-21, FR-22, FR-24 |
+| 11 | "Why?": reason, rule ID and version, inputs, evidence source | [11-why](screens/11-why.png) | UC-19 View explanation (“Why?”) | FR-23, FR-37 |
+| 12 | Progress: weight trend, steps with baseline week and target, energy per day | [12-progress](screens/12-progress.png) | UC-13 View progress | FR-27 |
+| 13 | Weekly check-in | [13-checkin](screens/13-checkin.png) | UC-14 Complete weekly safety check-in | FR-28 |
+| 14 | Check-in with a reported problem: activity paused, referral | [14-referral](screens/14-referral.png) | UC-14 Complete weekly safety check-in; UC-04 Receive referral to clinical care | FR-29 |
+| 15 | Settings: language, study group (demo switch), active hours, rule list | [15-settings](screens/15-settings.png) | UC-05 Choose interface language; UC-21 Set active hours and mute prompts | FR-26, FR-37, FR-39 |
+| 16 | Control arm: same app, tracking only, no Factors and Plan tabs | [16-control-today](screens/16-control-today.png) | Control-arm participant: self-monitoring use cases only | FR-31 |
+| 17 | Plan in Kazakh | [17-plan-kk](screens/17-plan-kk.png) | UC-05 Choose interface language | FR-39, NFR-19 |
+| 18 | Plan in English | [18-plan-en](screens/18-plan-en.png) | UC-05 Choose interface language | FR-39, NFR-19 |
 
 ### 2.1 Clickable flow
 
