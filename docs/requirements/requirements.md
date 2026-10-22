@@ -5,7 +5,7 @@
 | **Project** | Development of a Mobile Recommender System for Identifying Obesity Factors and Personalized Weight Management |
 | **Document type** | Software requirements specification (pre-defense item 6) |
 | **YouTrack task** | [DOA-8](https://yeralytemir.youtrack.cloud/issue/DOA-8) |
-| **Version / date** | 1.2 draft, 22 October 2026 (1.1: minimum OS versions and hosting from DOA-7; 1.2: Kazakh, Russian and English as equal Must languages, FR-39; 1.3: AI-assisted food logging FR-40, NFR-25 and NFR-06 aligned with DOA-7) |
+| **Version / date** | 1.4 draft, 22 October 2026 (1.1: minimum OS versions and hosting from DOA-7; 1.2: Kazakh, Russian and English as equal Must languages, FR-39; 1.3: AI-assisted food logging FR-40, NFR-25 and NFR-06 aligned with DOA-7; 1.4: hourly step counts in FR-10 and definitions fixed by the evaluation plan, DOA-12) |
 | **Inputs** | [Project proposal](../proposal/proposal.md); [Literature review](../research/literature-review.md); [Existing system comparison](../research/existing-systems.md); [Assumptions register](../research/02-assumptions-register.md); [Relevance summary](../research/relevance-summary.md) |
 
 ---
@@ -40,7 +40,7 @@ The system is a cross-platform mobile application with a backend that (a) screen
 | Hard constraint | A condition every generated plan must satisfy: energy within the target range, macronutrient shares within guideline ranges, calcium adequacy, activity intensity not above the profile's current zone (proposal, O2) |
 | Baseline week | The first 7 days after onboarding, during which data are collected and no step target or prompt is given; used to derive personal thresholds (proposal, Section 7.1) |
 | Deviating factor | A modifiable lifestyle factor (proposal, Section 2.3) whose value differs from its guideline-based target |
-| Active day | A day with at least one user-initiated logging event; the exact definition is fixed in the evaluation plan (DOA-12) |
+| Active day | A calendar day, in the user's local time zone, with at least one food, weight or waist log entry; app opens, step synchronization and recommendation views do not count (evaluation plan, Section 6.7) |
 
 ---
 
@@ -102,7 +102,7 @@ Acceptance criteria are written as Given/When/Then statements or as a measurable
 | FR-07 | The system shall let the user log foods and portions by searching a food composition database that includes locally consumed foods and dishes. | Must | **Given** a food from the local-food test list (compiled in DOA-16), **when** the user searches by its Russian name, **then** it is found and a logged portion adds energy, protein, fat, carbohydrate and calcium to the day's totals. | T | P (Section 7.1, Section 9 dependency); E (G3, L11, L16); A5, E3 |
 | FR-08 | The system shall let the user add a custom food with its nutrient values when a food is not in the database. | Could | **Given** a missing food, **when** the user enters its name and nutrients per 100 g, **then** it can be logged like any other food and is marked as user-created. | D | A2, A5 |
 | FR-09 | The system shall let the user log body weight and waist circumference with a date. | Must | **Given** a user, **when** they log weight or waist, **then** the value appears in the progress view (FR-27) and in the export (FR-35) with its date. | T | P (Sections 2.3, 7.1, O4); A11 |
-| FR-10 | The system shall collect daily step counts from the phone, with the user's permission. | Must | **Given** a user who granted permission, **when** a day ends, **then** that day's step count is stored; **given** permission is denied, **then** the user can still use all other functions and is told that step-based features are unavailable. | D | P (Sections 2.3, 7.1, O4/H3) |
+| FR-10 | The system shall collect step counts from the phone, with the user's permission, and store them per hour (or at a finer interval where the platform provides it) together with the daily total. | Must | **Given** a user who granted permission, **when** a day ends, **then** that day's hourly step counts and daily total are stored, and the hourly counts sum to the daily total; **given** permission is denied, **then** the user can still use all other functions and is told that step-based features are unavailable. | D, T | P (Sections 2.3, 7.1, O4/H3); evaluation plan, Section 6.7 (prompt response needs steps within 60 min of a prompt) |
 | FR-11 | The system shall optionally import steps and heart rate from wearables through Google Health Connect (Android) and Apple HealthKit (iOS). | Should | **Given** a connected wearable with data in Health Connect or HealthKit, **when** a sync runs, **then** steps and heart rate for the period are stored with their source, and duplicate step counts from phone and wearable are not added together. | D | P (Section 7.1); E (L10); A9 |
 | FR-12 | The system shall run a baseline week of 7 days after onboarding in which data are collected but no step target or activity prompt is given, and shall derive the user's personal step baseline from it. | Must | **Given** a new IA participant, **when** day 8 starts, **then** a step baseline exists and the first step target is derived from it; no step target or prompt was produced on days 1–7. | T | P (Section 7.1); E (L9, [6] in literature review); A7 |
 
@@ -319,7 +319,7 @@ These requirements are kept, because they also rest on the proposal or the liter
 | Task | What this specification needs from it |
 |---|---|
 | DOA-7 Technology comparison | Resolved: minimum OS versions Android 9 and iOS 15 (NFR-20); development on AWS with synthetic data only, pilot on a server in Kazakhstan before the first enrollment (NFR-06); AI used only for food-logging pre-fill (FR-40, NFR-25) |
-| DOA-12 Evaluation plan | Definition of an active day, randomization method (FR-30), schedule of study measurements (FR-34) |
+| DOA-12 Evaluation plan | Resolved in [evaluation-plan.md](../evaluation/evaluation-plan.md): active day (Section 6.7; replaces the working definition in Section 1.4), stratified block randomization (FR-30, Section 6.4), measurements at weeks 0, 6 and 12 (FR-34, Section 6.5), hourly step counts (FR-10) |
 | DOA-16 Rule base | Numeric targets, thresholds and tolerances referenced by FR-13, FR-15–FR-22, FR-24; local-food test list (FR-07) |
 | DOA-24 Ethics application | Retention period and deletion procedure (NFR-07), legal check of data residency (NFR-06) |
 | DOA-4 Interviews | Status of assumptions A1–A12 and E1–E4 (Section 6.3) |

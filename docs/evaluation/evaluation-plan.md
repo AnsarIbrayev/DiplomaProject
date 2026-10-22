@@ -5,8 +5,8 @@
 | **Project** | Development of a Mobile Recommender System for Identifying Obesity Factors and Personalized Weight Management |
 | **Document type** | Verification and evaluation plan (pre-defense item 9) |
 | **YouTrack task** | [DOA-12](https://yeralytemir.youtrack.cloud/issue/DOA-12) |
-| **Version / date** | 1.0 draft for supervisor review, 22 October 2026 |
-| **Inputs** | [Project proposal](../proposal/proposal.md) (aim, SQ1, O1–O4, H1–H3); [Requirements specification](../requirements/requirements.md) v1.3 (FR/NFR and acceptance criteria); [Technology comparison](../architecture/technology-comparison.md) (D5 rule engine, D7 AI-assisted logging, hosting); [Literature review](../research/literature-review.md) (limitations L1–L16) |
+| **Version / date** | 1.1, 22 October 2026 (1.0 approved by Ansar Ibrayev; 1.1: FR-10 step resolution resolved) |
+| **Inputs** | [Project proposal](../proposal/proposal.md) (aim, SQ1, O1–O4, H1–H3); [Requirements specification](../requirements/requirements.md) v1.4 (FR/NFR and acceptance criteria); [Technology comparison](../architecture/technology-comparison.md) (D5 rule engine, D7 AI-assisted logging, hosting); [Literature review](../research/literature-review.md) (limitations L1–L16) |
 | **Later deliverables** | `docs/evaluation/verification-report.md` (DOA-23), `docs/evaluation/usability-report.md`, `docs/evaluation/pilot-log.md` (DOA-25), analysis scripts in `ml/` (DOA-26) |
 
 ---
@@ -84,7 +84,7 @@ For O3 and O4, "success" means that the pilot produces effect estimates with con
 
 ### 3.1 Approach
 
-Testing follows the general concepts of ISO/IEC/IEEE 29119-1 [20]: test levels, a test basis (the requirements specification v1.3), test cases with expected results, and exit criteria. Mobile security checks follow the OWASP MASVS controls named in the requirements and the test procedures of the OWASP Mobile Application Security Testing Guide (MASTG) [18], [19]. All testing in this phase uses synthetic or test data in the development environment; no participant data exist before ethics approval (CON-04, NFR-06).
+Testing follows the general concepts of ISO/IEC/IEEE 29119-1 [20]: test levels, a test basis (the requirements specification v1.4), test cases with expected results, and exit criteria. Mobile security checks follow the OWASP MASVS controls named in the requirements and the test procedures of the OWASP Mobile Application Security Testing Guide (MASTG) [18], [19]. All testing in this phase uses synthetic or test data in the development environment; no participant data exist before ethics approval (CON-04, NFR-06).
 
 ### 3.2 Test levels
 
@@ -279,7 +279,7 @@ Each RA measurement is stored with the week, date and source flag (FR-34). Self-
 | **Waist change** | Week-12 minus week-0 waist circumference, cm |
 | **Adverse event** | Any injury, pain, dizziness or other health problem reported in a check-in or to the team. **Serious** if it leads to hospital care or prevents daily activities **(T)**; final definitions follow the ethics application (DOA-24) |
 
-**Note on step resolution.** FR-10 currently requires a daily step count. The prompt-response outcome needs step counts with at least hourly resolution around each prompt. The plan therefore proposes amending FR-10 (requirements v1.4) to store step counts per hour (or finer, where the platform provides them).
+**Note on step resolution.** The prompt-response outcome needs step counts with at least hourly resolution around each prompt. FR-10 was amended accordingly in requirements v1.4: step counts are stored per hour (or finer, where the platform provides them) together with the daily total.
 
 ### 6.8 Statistical analysis
 
@@ -424,7 +424,7 @@ Sending meal descriptions or photos to an external AI service (FR-40) is a separ
 ## 11. Open Questions
 
 1. **Team-set values (T).** The values marked (T) in this plan (block sizes, visit windows, valid-day rule, prompt-response threshold, imputation count, AI accuracy threshold, severity levels, stopping rule) need the team's and the supervisor's confirmation before the plan is frozen.
-2. **Step resolution.** Amend FR-10 to store hourly step counts so that prompt response can be computed (Section 6.7).
+2. **Step resolution (resolved, 22 October 2026).** FR-10 now requires hourly step counts (requirements v1.4), so prompt response can be computed (Section 6.7).
 3. **AI food logging in the pilot.** Depends on the ethics and legal decision (Section 8.4) and on the accuracy check (Section 4.4).
 4. **Usability test and ethics.** Confirm with the supervisor whether the pre-pilot usability test needs its own approval or is covered by the pilot application.
 5. **Outcome assessor.** If a person outside the team (for example, a volunteer from AITU) can take the week-6 and week-12 measurements, the RA blinding limitation is removed.
