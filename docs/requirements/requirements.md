@@ -65,10 +65,10 @@ Each requirement states where it comes from and how strong that basis is. This d
 
 | Code | Status | Meaning |
 |---|---|---|
-| **E** | Evidence | Based on a cited study, guideline or desk-research finding (literature review L1–L16, existing-system gaps G1–G4, desk findings D1–D6) |
+| **E** | Evidence | Based on a cited study, guideline or desk-research finding (literature review L1–L16, existing-system gaps G1–G4, desk findings D1–D6, findings on app users U1–U6 in `docs/research/relevance-summary.md`) |
 | **P** | Project decision | Fixed in the project proposal (aim, objectives O1–O4, scope, eligibility) |
 | **R** | Regulation or standard | Required by law or an external standard (references [1]–[6]) |
-| **A** | Assumption | Depends on a user or expert assumption (A1–A12, E1–E4) that is **unverified** until the interviews of DOA-4 are analysed |
+| **A** | Assumption | Depends on a user or expert assumption (A1–A12, E1–E4) that is **unverified** until the survey and interviews of DOA-4 are analysed |
 | **T** | Team-set target | A numeric threshold chosen by the team as an engineering target; not derived from evidence, and reviewed after verification |
 
 ### 2.4 Acceptance criteria and verification methods

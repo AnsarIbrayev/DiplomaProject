@@ -1,47 +1,37 @@
-# Evidence of Relevance
+# Research: Evidence of Relevance, Literature and Existing Systems
 
-Pre-defense item 2 · YouTrack task [DOA-4](https://yeralytemir.youtrack.cloud/issue/DOA-4) · Owner: Ibrayev Ansar · Due: 23 October 2026
+Pre-defense item 2 (evidence of relevance) · YouTrack task [DOA-4](https://yeralytemir.youtrack.cloud/issue/DOA-4) · Owner: Ibrayev Ansar
 
-The committee asks *"what evidence informs the requirements and whether verified findings are distinguished from assumptions"*, and expects 3–5 discussions with user representatives or a substantive agreement with a client. This folder combines two kinds of evidence:
+The committee asks *"what evidence informs the requirements and whether verified findings are distinguished from assumptions"*. The listed evidence types include analysis of available data, observation of relevant processes, and discussions with users.
 
-1. **Analysis of available data** (desk research): complete.
-2. **Interviews with potential users and one expert**: materials ready, interviews to be conducted.
+**Current basis (22 October 2026).** Item 2 is presented on verified **secondary evidence**: prevalence statistics, published studies of users of weight-management apps, and a structured comparison of existing applications. **Primary user evidence (online survey and interviews) is planned validation**: the materials are ready, but no responses have been collected. Every user-level statement that depends on it is marked as an assumption. The report is in [relevance-summary.md](relevance-summary.md), Section 6.2.
 
 ## Contents
 
 | File | Content | Status |
 |---|---|---|
-| [01-desk-research.md](01-desk-research.md) | Obesity statistics: world, Kazakhstan, Astana region; open obesity-factor data; what this does and does not verify | Complete |
-| [02-assumptions-register.md](02-assumptions-register.md) | User and expert assumptions behind the requirements, decision rule for "verified" | Ready; statuses to update after interviews |
-| [03-recruitment-and-consent.md](03-recruitment-and-consent.md) | Selection criteria, screening, recruitment messages, informed consent (EN/RU) | Ready |
-| [04-interview-guide.md](04-interview-guide.md) | User guide (Q1–Q20) and expert guide (X1–X8), EN/RU, linked to assumptions | Ready |
-| [05-results-template.md](05-results-template.md) | Record template for each interview, data-protection rules | Ready |
-| [relevance-summary.md](relevance-summary.md) | Analysis steps, summary report (finding → requirement → status), slide outline | Ready; to be filled after interviews |
-| [interviews/](interviews/) | Anonymised records P1–P5, X1 | Empty until interviews take place |
+| [relevance-summary.md](relevance-summary.md) | **Evidence of relevance report**: evidence streams S1–S5, findings D/U/G, verified vs assumptions, links to requirements, slide text | Complete for S1–S3; S4–S5 pending |
+| [01-desk-research.md](01-desk-research.md) | Obesity statistics: world, Kazakhstan, Astana region; open obesity-factor data | Complete |
+| [literature-review.md](literature-review.md) | Literature review (pre-defense item 3) | See file |
+| [existing-systems.md](existing-systems.md) | Existing system comparison (pre-defense item 4) | See file |
+| [02-assumptions-register.md](02-assumptions-register.md) | User and expert assumptions, decision rule, current status | Updated with secondary evidence |
+| [survey/survey-form.md](survey/survey-form.md) | Online survey (Google Forms, RU/KK), 15 questions linked to assumptions, analysis rule | Ready to publish |
+| [survey/results.md](survey/results.md) | Aggregated survey results | Empty until responses are collected |
+| [03-recruitment-and-consent.md](03-recruitment-and-consent.md) | Interview recruitment, screening, informed consent (EN/RU) | Ready |
+| [04-interview-guide.md](04-interview-guide.md) | User guide (Q1–Q20) and expert guide (X1–X8), EN/RU | Ready |
+| [05-results-template.md](05-results-template.md) | Interview record template, data-protection rules | Ready |
+| [interviews/](interviews/) | Anonymised interview records | Empty until interviews take place |
 
-## Plan to complete DOA-4
+## Planned validation
 
-Status on 22 October 2026: everything that does not depend on interview data is complete, including the draft summary with desk-research findings ([relevance-summary.md](relevance-summary.md)). The interviews remain.
-
-| When | Step | Who |
+| Step | Who | Target |
 |---|---|---|
-| 22 Oct, today | Ask the supervisor whether anonymised requirements interviews need a formal ethics application (03, Section 3.5). | Ansar |
-| 22 Oct, today | Send the recruitment messages (03, Section 3.3) to 6–8 people to get 3–4 interviews, and the expert message to 1–2 specialists. Fill the quota in 6.2, part 2 (P1–P4, X1). | Ansar |
-| 22–23 Oct | Conduct the interviews (30–40 min each, online is fine) using 04. Write notes in the template (05) within 24 hours. | Ansar; a team member as note-taker if available |
-| 23 Oct | Send the notes for analysis. Then fill in the records in `interviews/`, update the assumptions register, and complete the pending parts of the summary and slide. | Ansar and Claude |
-| 23 Oct | Pull request with the results, approval, merge, and close DOA-4. | Ansar |
-
-## Acceptance criteria for DOA-4
-
-- [x] Desk research with verifiable sources (IEEE style).
-- [x] Interview materials linked to explicit assumptions.
-- [ ] At least 3 interviews conducted, anonymised records in `interviews/`.
-- [ ] Assumptions register updated with a status for every assumption.
-- [ ] Summary report separating verified findings from assumptions, with impact on requirements.
-- [ ] Pull request reviewed by another team member and linked in YouTrack.
+| Publish the survey and share it in AITU chats and with contacts | Ansar (team helps share) | At least 15 eligible responses |
+| Enter aggregated counts in `survey/results.md` and update the register | Claude, from the export | After responses arrive |
+| Interviews with 3–4 users and 1 expert | Ansar | Before pre-defense 2 |
 
 ## Principles
 
-- No interview results, quotations or numbers are entered until the interviews have taken place.
-- All statistics come from the sources listed in [01-desk-research.md](01-desk-research.md).
-- No personal data are stored in the repository (see 05, Section 5.1).
+- No user responses, quotations or numbers are entered until they have actually been collected.
+- All statistics come from the cited sources.
+- No personal data are stored in the repository (see 05, Section 5.1, and the survey settings).

@@ -4,9 +4,9 @@
 |---|---|
 | **YouTrack task** | [DOA-4](https://yeralytemir.youtrack.cloud/issue/DOA-4) |
 | **Purpose** | List every assumption about users that the requirements depend on, and record how each one was tested |
-| **Status** | All user assumptions are **unverified** until the interviews are completed |
+| **Status** | 22 Oct 2026: A2–A5 partially supported by secondary evidence (literature, existing-system comparison); all other assumptions unverified until the survey (S4) and interviews (S5) |
 
-The committee evaluates *"what evidence informs the requirements and whether verified findings are distinguished from assumptions"*. This register is the single place where that distinction is made. Each assumption is linked to the interview questions that test it (see [04-interview-guide.md](04-interview-guide.md)) and to the requirement area it affects.
+The committee evaluates *"what evidence informs the requirements and whether verified findings are distinguished from assumptions"*. This register is the single place where that distinction is made. Each assumption is linked to the interview questions that test it (see [04-interview-guide.md](04-interview-guide.md)), to the survey questions in [survey/survey-form.md](survey/survey-form.md), and to the requirement area it affects. Findings D, U and G are defined in [relevance-summary.md](relevance-summary.md), Section 6.2.
 
 ## 2.1 Status definitions
 
@@ -27,10 +27,10 @@ Statements of intention ("I would use it") are weaker evidence than descriptions
 | ID | Assumption | Tested by | Requirement area affected | Status | Evidence (filled after analysis) |
 |---|---|---|---|---|---|
 | A1 | Adults with overweight in the target group have already tried to manage their weight, and most have tried at least one app or online programme. | Q4, Q8 | Problem relevance; onboarding | Unverified | |
-| A2 | Users stop using weight-management apps within weeks; the main reasons are logging effort, generic advice and loss of motivation. | Q9, Q10 | Engagement features; logging UX | Unverified | |
-| A3 | Users want nutrition and physical activity advice in one tool rather than separate apps. | Q11, Q14 | Joint recommendation engine (O1) | Unverified | |
-| A4 | Users trust a recommendation more when the app explains why it was given. | Q15 | Explanation of every recommendation | Unverified | |
-| A5 | Existing food databases lack locally consumed foods and dishes, which makes logging inaccurate or tedious. | Q10, Q12 | Local food database | Unverified | |
+| A2 | Users stop using weight-management apps within weeks; the main reasons are logging effort, generic advice and loss of motivation. | Q9, Q10 | Engagement features; logging UX | Partially supported (literature, non-local) | U1, U2; reasons and local pattern pending (survey Q3–Q5) |
+| A3 | Users want nutrition and physical activity advice in one tool rather than separate apps. | Q11, Q14 | Joint recommendation engine (O1) | Need supported; preference unverified | G2, U4; survey Q7 pending |
+| A4 | Users trust a recommendation more when the app explains why it was given. | Q15 | Explanation of every recommendation | Need supported; user trust unverified | G1, U5; survey Q8 pending |
+| A5 | Existing food databases lack locally consumed foods and dishes, which makes logging inaccurate or tedious. | Q10, Q12 | Local food database | Partially supported (1 of 5 apps covers local dishes) | G3; hands-on check and survey Q5 pending |
 | A6 | Users can name the lifestyle factors they believe affect their weight (eating patterns, activity, sleep, stress, work schedule), and want the app to show which of their factors matter most. | Q5, Q6, Q13 | Factor identification | Unverified | |
 | A7 | Users prefer small, gradual activity targets based on their own baseline over fixed targets such as 10,000 steps. | Q7, Q16 | Step-target rules | Unverified | |
 | A8 | Push reminders are acceptable if they are few and timed to the user's routine; frequent generic reminders lead to disabling notifications. | Q17 | Prompt scheduling | Unverified | |
