@@ -3,9 +3,9 @@
 | | |
 |---|---|
 | **YouTrack task** | [DOA-4](https://yeralytemir.youtrack.cloud/issue/DOA-4) |
-| **Status** | Draft: desk-research findings complete; interview findings pending. No interview results have been entered. |
+| **Status** | Report based on verified secondary evidence (S1–S3). User survey and interviews (S4–S5) are planned validation; no user data have been entered. |
 
-## 6.1 Analysis procedure
+## 6.1 Analysis procedure (for interviews S5; the survey S4 uses the rule in [survey/survey-form.md](survey/survey-form.md))
 
 | Step | Action | Output |
 |---|---|---|
@@ -19,96 +19,103 @@
 
 A second team member should check steps 3–5 independently for at least two interviews, and disagreements are noted in the summary. This reduces the risk that the interviewer reads the expected answer into the notes.
 
-## 6.2 Summary report (draft)
+## 6.2 Evidence of relevance report
 
-> **Draft status, 22 October 2026.** Parts based on desk research are complete. Parts marked **⏳ Pending interviews** are filled in only after the interviews have taken place. Until then every user assumption keeps the status *Unverified*.
+> **Status, 22 October 2026.** Item 2 is presented on the basis of **secondary evidence**: analysis of available data, published studies of users of weight-management applications, and a structured comparison of existing systems. All of it is verified against cited sources. **Primary user evidence (online survey and interviews) has not been collected yet.** It is planned as validation and is labelled as such everywhere below. No user responses, quotations or numbers from users are reported in this document.
 
-### 1. Method
+### 1. Evidence streams
 
-**Desk research (complete).** Published statistics and open data were reviewed on 22 October 2026: WHO, NCD-RisC and GBD 2021 for global data; the national WHO STEPS survey 2021–2022 (n = 6,720), WHO COSI 2020 and NCD-RisC estimates for Kazakhstan; a cohort study for the Astana region; and the UCI obesity-factor dataset. Full results and references are in [01-desk-research.md](01-desk-research.md).
+| Stream | Evidence type (committee list) | Status | Document |
+|---|---|---|---|
+| S1. Prevalence statistics, world, Kazakhstan, Astana region | Analysis of available data | **Complete** | [01-desk-research.md](01-desk-research.md) |
+| S2. Published studies of users of digital weight-management tools | Analysis of available data (peer-reviewed studies) | **Complete** | [literature-review.md](literature-review.md), Sections 3.2–3.3 |
+| S3. Comparison of five existing applications on 10 criteria | Observation of relevant systems (official descriptions) | **Complete**; hands-on check pending | [existing-systems.md](existing-systems.md) |
+| S4. Online survey of potential users (Google Forms, RU/KK) | Users' representatives | **Planned validation**: form ready, not yet distributed | [survey/survey-form.md](survey/survey-form.md) |
+| S5. Interviews with 3–4 users and 1 expert | Discussions with users' representatives | **Planned validation**: materials ready, not yet conducted | [03](03-recruitment-and-consent.md), [04](04-interview-guide.md), [05](05-results-template.md) |
 
-**Interviews (⏳ pending).** Semi-structured interviews (30–40 min) following [04-interview-guide.md](04-interview-guide.md), conducted on [dates] by [interviewer]; [n] in person, [n] online; language: [ ]. Informed consent obtained from all participants.
+### 2. Key findings
 
-### 2. Participants (⏳ pending)
+**S1. The problem is large and local** (details and references in [01-desk-research.md](01-desk-research.md)):
 
-Planned profiles (recruitment quota from [03-recruitment-and-consent.md](03-recruitment-and-consent.md), Section 3.1) and actual participants:
-
-| Code | Planned profile | Age band | Sex | BMI band | App experience | Wearable | Mode |
-|---|---|---|---|---|---|---|---|
-| P1 | Student, 18–24, trying to lose weight | | | | | | |
-| P2 | Working adult, 25–44, has used a calorie or fitness app | | | | | | |
-| P3 | Adult 35–60, has never used a weight app | | | | | | |
-| P4 | Any profile not yet covered (other sex than most of P1–P3) | | | | | | |
-| X1 | Dietitian, doctor or certified fitness trainer | Profession: | Experience: | – | – | – | |
-
-### 3. Key findings
-
-**From desk research (verified by sources):**
-
-| # | Finding | Evidence |
+| # | Finding | Source |
 |---|---|---|
-| D1 | Overweight and obesity affect close to half of the world's adults (2.6 billion with overweight, 940 million with obesity in 2024), and the number is forecast to keep rising to 3.80 billion adults with overweight or obesity by 2050. | [01, refs 1–3] |
-| D2 | In Kazakhstan about one in five adults is estimated to live with obesity (21.8%), and about 30% of surveyed adults have overweight. | [01, refs 4–5] |
-| D3 | One in five adults in Kazakhstan (19.7%) does not meet the WHO physical activity recommendation. | [01, ref 6] |
-| D4 | In the Astana region, 44% of adults aged 50–74 had obesity and 72% had central obesity (2012–2015 data). | [01, ref 9] |
-| D5 | Excess weight starts early: 21% of children aged 6–9 in Kazakhstan have overweight or obesity. | [01, ref 8] |
-| D6 | The main open obesity-factor dataset is from Latin America and 77% synthetic, so it does not represent users in Kazakhstan. | [01, refs 10–11] |
+| D1 | 2.6 billion adults with overweight and 940 million with obesity in 2024; 3.80 billion adults with overweight or obesity forecast for 2050. | 01, refs [1]–[3] |
+| D2 | In Kazakhstan about one in five adults has obesity (21.8%, modelled), and about 30% of surveyed adults have overweight. | 01, refs [4], [5] |
+| D3 | 19.7% of adults in Kazakhstan do not meet the WHO physical activity recommendation. | 01, ref [6] |
+| D4 | In the Astana region, 44% of adults aged 50–74 had obesity and 72% central obesity (2012–2015). | 01, ref [9] |
+| D5 | 21% of children aged 6–9 in Kazakhstan have overweight or obesity. | 01, ref [8] |
+| D6 | The main open obesity-factor dataset is Latin American and 77% synthetic, so it does not represent users in Kazakhstan. | 01, refs [10], [11] |
 
-**From interviews (⏳ pending):** one row per theme, with the participant count (for example, "3 of 4"), the finding IDs, and at most one anonymised quotation.
+**S2. What is known about users of weight-management apps** (numbers as reported in the cited studies; populations are not from Kazakhstan):
 
-| # | Theme | Finding | Participants | Finding IDs |
-|---|---|---|---|---|
-| T1 | | | _ of _ | |
+| # | Finding | Source (literature review numbering) |
+|---|---|---|
+| U1 | Engagement with self-monitoring drops sharply: in a real-world nutrition app, food logging fell from 63.2% of days while a sensor was worn to 2.4% after it was removed. | [16] |
+| U2 | Engagement is linked to outcome: users who opened more feedback messages lost more weight, yet tailored feedback alone did not improve weight loss over self-monitoring (−2.12% vs −2.39%, P = .68). | [4] |
+| U3 | Engagement is rarely defined or measured: among 59 nutrition-app studies, only 31% defined engagement and 29% measured retention. | [5] |
+| U4 | Prompts with personalized thresholds increased steps in the hour after a prompt but did not change weekly activity. | [6] |
+| U5 | Recommendations from an opaque general-purpose AI chatbot for a simulated person with obesity contained less energy than requested, unbalanced macronutrients and too little calcium. | [11] |
+| U6 | Stand-alone digital interventions have small effects that disappear against active controls. | [1] |
 
-### 4. Verified findings versus assumptions
+**S3. What existing applications do not offer** (gaps G1–G4 in [existing-systems.md](existing-systems.md), Section 5.1):
+
+| # | Gap |
+|---|---|
+| G1 | None of the five applications explains its recommendations or states guideline constraints. |
+| G2 | None gives joint nutrition and activity recommendations or identifies the user's deviating lifestyle factors. |
+| G3 | None combines local language, local foods and activity data; Kazakh is available in one application only. |
+| G4 | None has been tested against a self-monitoring-only control. |
+
+**S4–S5. What potential users in Astana say: ⏳ not yet collected.** Results will be added here as aggregated survey counts and interview themes, with the number of respondents for each finding.
+
+### 3. Verified findings versus assumptions
 
 | Statement | Status | Evidence |
 |---|---|---|
-| Excess weight is a large and growing global problem. | **Verified** | D1 |
-| Obesity and overweight are common among adults in Kazakhstan. | **Verified** | D2 |
+| Excess weight is a large and growing problem worldwide and in Kazakhstan. | **Verified** | D1, D2 |
 | Insufficient physical activity is common in Kazakhstan. | **Verified** | D3 |
 | Obesity, including central obesity, is highly prevalent in the Astana region. | **Partially verified**: older adults, 2012–2015 | D4 |
 | Open obesity-factor data can be used as-is for users in Kazakhstan. | **Refuted** | D6 |
-| A1–A12: user needs and behaviour (app use and abandonment, joint nutrition and activity advice, explanations, local foods, factors, targets, reminders, data sharing, privacy, logging, safety screening) | **Unverified**, ⏳ pending interviews | [02-assumptions-register.md](02-assumptions-register.md) |
-| E1–E4: safety and scope of guideline-based advice without supervision | **Unverified**, ⏳ pending expert interview | [02-assumptions-register.md](02-assumptions-register.md) |
+| Existing applications do not explain recommendations, do not combine nutrition and activity recommendations, and do not cover the local context. | **Verified** for the five compared applications (official descriptions) | G1–G3 |
+| Users of self-monitoring apps disengage over time (A2). | **Partially supported** by literature in non-local populations; reasons and local pattern unverified | U1, U2; S4–S5 pending |
+| Users want nutrition and activity advice in one tool (A3). | **Need supported** by literature and gap analysis; **user preference unverified** | G2, U4; S4–S5 pending |
+| Users trust explained recommendations more (A4). | **Need supported** (opaque advice can be wrong); **user trust unverified** | G1, U5; S4–S5 pending |
+| Existing food databases lack local dishes (A5). | **Partially supported**: one of five applications covers local dishes; hands-on check pending | G3; S4–S5 pending |
+| A1, A6–A12: own weight-management attempts, perceived factors, step-target preference, reminders, data sharing, privacy, logging, safety screening | **Unverified assumptions** | To be tested by S4 (survey) and S5 (interviews) |
+| E1–E4: safety and scope of guideline-based advice without supervision | **Unverified assumptions**; scope follows the EASO position statement and eligibility rules in the proposal | Expert interview (S5) |
 
-### 5. Findings and requirements
+### 4. Findings and requirements
 
-Requirement IDs (FR-xx, NFR-xx) are assigned in the requirements specification (pre-defense item 6). Until then, findings are linked to the requirement areas of the project scope (`docs/proposal/proposal.md`, Section 7.1).
+Requirements cite their basis with the source codes defined in [requirements.md](../requirements/requirements.md), Section 2.3: **E** for evidence (D, U, L, G findings), **A** for unverified assumptions.
 
-| Finding | Requirement area | Status | Evidence |
+| Finding | Requirements | Basis status |
+|---|---|---|
+| D1–D3 | Overall aim; physical activity module FR-10, FR-12, FR-18 | Verified |
+| D4 | Waist circumference logging FR-06, FR-09 | Partially verified |
+| D5 | Children excluded from scope (proposal, Section 7.2) | Verified |
+| D6 | Guideline-based factor scoring FR-13, FR-14 instead of a model trained on open data | Verified |
+| U1, U2, U3, U6 | Engagement logging FR-32; self-monitoring control mode FR-31; offline logging NFR-12 | Verified (literature) |
+| U4 | Baseline week FR-12; prompts combined with nutrition rules FR-22, FR-25 | Verified (literature) |
+| U5, G1 | Explanation for every recommendation FR-23; hard constraints FR-24 | Verified need; user trust is assumption A4 |
+| G2 | Factor ranking FR-13, FR-14; joint recommendations FR-15–FR-22 | Verified need; user preference is assumption A3 |
+| G3 | Local food database FR-07, FR-17; Kazakh, Russian, English interface FR-39 | Partially verified; A5 pending |
+| G4 | Control mode FR-31; randomization FR-30 | Verified |
+| A7, A8, A9, A10, A11, A12 | FR-18, FR-25, FR-26, FR-11, NFR-04, FR-09, FR-04 | **Assumption**: requirements stay, marked "A", until S4–S5 |
+
+### 5. Limitations
+
+- The evidence for item 2 is secondary. It shows that the problem exists and that existing tools do not address it, but it does not show what potential users in Astana need or prefer. These user-level statements remain assumptions until S4–S5 are completed.
+- Literature on app users comes from other countries and populations (U1–U6).
+- Kazakhstan obesity prevalence is a modelled estimate; Astana data refer to older adults in 2012–2015.
+- The existing-system comparison relies on official descriptions; the hands-on check is still pending.
+
+### 6. Planned validation
+
+| Step | What | Target | Result goes to |
 |---|---|---|---|
-| D1, D2 | Overall aim: a weight-management tool for adults with overweight or class I obesity is relevant in Kazakhstan. | Verified | Sources |
-| D3 | Physical activity module: step targets raised gradually from the user's own baseline, not only nutrition tracking. | Verified (need); the form of the targets is assumption A7 | Source; A7 pending |
-| D4 | Anthropometric logging includes waist circumference, not only weight and BMI. | Partially verified | Source (older adults) |
-| D5 | Children and adolescents stay out of scope: the system's guideline-based rules are for adults only. | Verified (scope decision) | Source; proposal Section 7.2 |
-| D6 | Factor identification is validated on locally collected data (pilot), not only on open datasets; the food database includes locally consumed foods. | Verified (need for local data); local foods also tested by A5 | Source; A5 pending |
-| T1 … | ⏳ pending interviews | | |
-
-Then list requirements that were added, changed, re-prioritized or removed because of interview evidence (see 6.5).
-
-### 6. Limitations
-
-**Desk research:**
-
-- Kazakhstan obesity prevalence is a modelled estimate (NCD-RisC); the national STEPS articles report overweight and other indicators but not one overall obesity figure in their abstracts.
-- The three STEPS articles use the same survey sample and are not independent confirmations.
-- No recent estimate for working-age adults in Astana was found; the Astana data refer to adults aged 50–74 in 2012–2015.
-
-**Interviews (⏳ adapt after the interviews):**
-
-- small convenience sample (n = __) recruited through personal and university networks;
-- self-reported weight band and behaviour;
-- possible interviewer and social-desirability bias;
-- statements about future use are weaker than past behaviour;
-- the sample may not represent all age groups of the target population.
-
-### 7. Next steps
-
-1. Conduct at least 3 interviews (target: P1–P4 and X1) and fill in the records in `interviews/`.
-2. Update the assumptions register and Sections 2–6 of this summary.
-3. Use the verified findings when writing the requirements specification (pre-defense item 6), and label requirements based on unverified assumptions.
-4. Assumptions that interviews cannot test (T1–T3 in the register) are tested by prototype usability testing and the 12-week pilot.
+| 1 | Distribute the online survey ([survey/survey-form.md](survey/survey-form.md)) through AITU chats and personal contacts | At least 15 eligible responses | [survey/results.md](survey/results.md) (aggregated counts only) |
+| 2 | Interviews with 3–4 users and 1 expert | Before pre-defense 2 | `interviews/` and this report |
+| 3 | Update the assumptions register and the source status of requirements | After steps 1–2 | [02-assumptions-register.md](02-assumptions-register.md), requirements |
 
 ## 6.3 Theme table (working)
 
@@ -148,19 +155,19 @@ Requirements that come from the literature or from the project aim rather than f
 
 **Title:** Evidence of relevance
 
-**1. The problem is large and local (desk research, verified)**
+**1. The problem is large and local (verified, S1)**
 - World: 2.6 billion adults with overweight, 940 million with obesity (WHO, 2024)
 - Kazakhstan: about 1 in 5 adults with obesity (21.8%, NCD-RisC); about 30% with overweight (STEPS 2021–22, n = 6,720)
 - 19.7% of adults in Kazakhstan do not meet WHO physical activity recommendations
-- Open obesity-factor data are not local (Latin America, 77% synthetic), so local evidence is needed
 
-**2. What users told us (⏳ pending interviews)**
-- n = __ interviews (__ users, __ expert), [dates], semi-structured, 30–40 min
-- Top 3 findings with counts (for example, "3 of 4 stopped using a calorie app within a month because ...")
+**2. Users disengage and current tools do not fill the gap (verified, S2–S3)**
+- Food logging fell from 63.2% to 2.4% of days once passive support stopped; tailored feedback alone did not beat self-monitoring
+- None of 5 compared apps explains its recommendations or combines nutrition and activity recommendations; Kazakh in 1 of 5
 
 **3. Verified vs assumptions**
-- Green: problem scale, local prevalence, low activity (sources)
-- Yellow or red: user assumptions A1–A12 with their status after the interviews
+- Green: problem scale, local prevalence, low activity, gaps G1–G4
+- Yellow: A2–A5 (supported by literature or comparison, not yet by local users)
+- Grey: A1, A6–A12, E1–E4 (assumptions; requirements based on them are marked "A")
 
-**4. Impact on requirements**
-- 2–3 requirements that the evidence confirmed or changed (from Section 6.2, part 5)
+**4. Planned validation**
+- Online survey (target ≥ 15 responses) and 3–4 user + 1 expert interviews; results update the register and the requirements
