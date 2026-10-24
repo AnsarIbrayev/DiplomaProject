@@ -38,7 +38,7 @@
 3. **Prototype.** The prototype has no backend, database, notifications or wearable connection. It uses one synthetic demo profile; food nutrient values are illustrative and are not taken from a verified food composition table. AI-assisted food logging is simulated. The prototype rule base contains placeholder values marked (T).
 4. **Team-set values.** Values marked (T) in the requirements and the evaluation plan are design choices of the team, not findings from data, and are subject to supervisor approval.
 5. **Not yet implemented.** Backend, production rule engine and verification code (`backend/`, `ml/`). Thesis chapters in `docs/thesis/` are outlines.
-6. **Review process.** Pull requests #5–#32 were merged into `develop` without a recorded GitHub review by another team member; content was agreed within the team outside GitHub.
+6. **Review process.** Pull requests #5–#34 were merged into `develop` without a recorded GitHub review by another team member; content was agreed within the team outside GitHub.
 
 ## 3. Outstanding Tasks
 
