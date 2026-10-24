@@ -7,7 +7,8 @@
 | **Supervisor** | Kashkimbayeva Nurzhamal Meirkulovna |
 | **Date** | 24 October 2026 |
 | **Repository** | https://github.com/AnsarIbrayev/DiplomaProject |
-| **Submitted version** | Git tag `pre-defense-1` (https://github.com/AnsarIbrayev/DiplomaProject/tree/pre-defense-1) |
+| **Submitted version** | Git tag `prob-period-1` (https://github.com/AnsarIbrayev/DiplomaProject/tree/prob-period-1); tag `pre-defense-1` marks the first merge of the same work into `main` |
+| **Online prototype** | https://claude.ai/artifact/R7UrdujHwhD1bVwGGv4BXE (web build of [mobile/](../../mobile/), synthetic demo data) |
 | **YouTrack** | https://yeralytemir.youtrack.cloud/projects/DOA |
 | **YouTrack task** | [DOA-15](https://yeralytemir.youtrack.cloud/issue/DOA-15) |
 
@@ -62,5 +63,5 @@
 1. **Repository structure:** [README.md](../../README.md), Section 8.
 2. **Trace a task to its deliverable:** YouTrack [DOA-8](https://yeralytemir.youtrack.cloud/issue/DOA-8) → branch `docs/DOA-8-requirements` → pull request #11 → [requirements.md](../requirements/requirements.md). The VCS tab of each YouTrack task lists the commits that mention it.
 3. **Requirement → use case → screen:** FR in [requirements.md](../requirements/requirements.md) → UC in [use-cases.md](../architecture/use-cases.md) → screen in [docs/prototype/README.md](../prototype/README.md).
-4. **Run and test the prototype:** `cd mobile && flutter pub get && flutter test && flutter run -d chrome`.
+4. **Run and test the prototype:** open the [online web build](https://claude.ai/artifact/R7UrdujHwhD1bVwGGv4BXE), or run it locally: `cd mobile && flutter pub get && flutter test && flutter run -d chrome`.
 5. **History:** `git log --oneline develop`; each commit message carries its task ID.

@@ -6,6 +6,7 @@
 | **YouTrack task** | [DOA-11](https://yeralytemir.youtrack.cloud/issue/DOA-11) |
 | **Version / date** | 0.1, 22 October 2026 |
 | **Source code** | [`mobile/`](../../mobile/) (Flutter) |
+| **Online demo** | [Web build](https://claude.ai/artifact/R7UrdujHwhD1bVwGGv4BXE) (opens in a browser, about 15 MB on first load) |
 | **Related documents** | [Requirements](../requirements/requirements.md) (DOA-8), [technology comparison](../architecture/technology-comparison.md) (DOA-7), [project proposal](../proposal/proposal.md) |
 
 ---
