@@ -18,7 +18,7 @@
 | No. | Component | Deliverable | YouTrack | Pull requests |
 |---|---|---|---|---|
 | 1 | Project proposal | [docs/proposal/proposal.md](../proposal/proposal.md): title, team, supervisor, problem statement, target users, aim, objectives O1–O4, hypotheses, expected outcomes, scope, engineering complexity | DOA-3 | #5 |
-| 2 | Evidence of relevance | [docs/research/relevance-summary.md](../research/relevance-summary.md): verified secondary evidence (statistics, studies of app users, gaps of existing apps), three interviews (two users, one dietitian; [summary](../research/interviews/interview-summary-kadirbay.md)), assumptions register, survey and interview kit | DOA-4 | #6, #8, #20, #27 |
+| 2 | Evidence of relevance | [docs/research/relevance-summary.md](../research/relevance-summary.md): verified secondary evidence (statistics, studies of app users, gaps of existing apps), three interviews (two users, one dietitian; [summary](../research/interviews/interview-summary-kadirbay.md)), assumptions register, survey and interview kit | DOA-4 | #6, #8, #20, #27, #28 |
 | 3 | Literature review | [docs/research/literature-review.md](../research/literature-review.md): critical review and analysis table, 27 sources; registry in [research/literature/](../../research/literature/README.md) | DOA-5 | #9 |
 | 4 | Existing system comparison | [docs/research/existing-systems.md](../research/existing-systems.md): systems compared on a fixed set of criteria, with dated evidence | DOA-6 | #10 |
 | 5 | Technology comparison | [docs/architecture/technology-comparison.md](../architecture/technology-comparison.md): seven decisions (D1–D7) with alternatives and justification from the requirements | DOA-7 | #12, #15 |
@@ -28,7 +28,7 @@
 | 9 | Verification and evaluation plan | [docs/evaluation/evaluation-plan.md](../evaluation/evaluation-plan.md): software tests, rule-base verification on 200 synthetic profiles (SQ1), usability test with SUS, 12-week randomized pilot against a self-monitoring baseline | DOA-12 | #17, #19 |
 | 10 | Project management and risks | [docs/project-management.md](../project-management.md): roles and RACI, Git / YouTrack workflow, milestones, dependencies and critical path, risk register (17 risks) | DOA-13 | #21, #25 |
 | 11 | Supervisor feedback | [docs/meetings/2026-10-supervisor-review/](../meetings/2026-10-supervisor-review/README.md): review package, feedback form, [feedback log](../meetings/2026-10-supervisor-review/feedback-log.md) | DOA-14 | #22, #23 |
-| – | README and repository setup | [README.md](../../README.md), [CONTRIBUTING.md](../../CONTRIBUTING.md), [.env.example](../../.env.example), [tests/](../../tests/README.md) | DOA-1, DOA-2 | #1–#3, #7, this PR |
+| – | README and repository setup | [README.md](../../README.md), [CONTRIBUTING.md](../../CONTRIBUTING.md), [.env.example](../../.env.example), [tests/](../../tests/README.md) | DOA-1, DOA-2 | #1–#3, #7, #26 |
 
 ## 2. Known Limitations
 
@@ -37,7 +37,7 @@
 3. **Prototype.** The prototype has no backend, database, notifications or wearable connection. It uses one synthetic demo profile; food nutrient values are illustrative and are not taken from a verified food composition table. AI-assisted food logging is simulated. The prototype rule base contains placeholder values marked (T).
 4. **Team-set values.** Values marked (T) in the requirements and the evaluation plan are design choices of the team, not findings from data, and are subject to supervisor approval.
 5. **Not yet implemented.** Backend, production rule engine and verification code (`backend/`, `ml/`). Thesis chapters in `docs/thesis/` are outlines.
-6. **Review process.** Pull requests #5–#25 were merged into `develop` without a recorded GitHub review by another team member; content was agreed within the team outside GitHub.
+6. **Review process.** Pull requests #5–#28 were merged into `develop` without a recorded GitHub review by another team member; content was agreed within the team outside GitHub.
 
 ## 3. Outstanding Tasks
 
