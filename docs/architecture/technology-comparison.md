@@ -244,7 +244,7 @@ Two supporting choices follow from the decisions and are not compared separately
 
 ## 11. Use in the Thesis
 
-The decisions in Sections 2–8 are summarized in Chapter 3 (System Design), and the selected stack in Section 9 forms the basis of the component diagram (pre-defense item 7). The ML and AI decisions (Sections 6 and 8) are cited in the literature review discussion of data-driven factor identification.
+The decisions in Sections 2–8 are summarized in Chapter 2 (System Design), and the selected stack in Section 9 forms the basis of the component diagram (pre-defense item 7). The ML and AI decisions (Sections 6 and 8) are cited in the literature review discussion of data-driven factor identification.
 
 ---
 

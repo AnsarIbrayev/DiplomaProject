@@ -1,13 +1,13 @@
 ---
-name: Задача
-about: Новая задача по проекту
+name: Task
+about: New project task
 labels: task
 ---
 
-## Описание
+## Description
 
-## Критерии готовности
+## Definition of done
 
 - [ ]
 
-## Задача YouTrack
+## YouTrack task
