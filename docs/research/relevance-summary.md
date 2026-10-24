@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **YouTrack task** | [DOA-4](https://yeralytemir.youtrack.cloud/issue/DOA-4) |
-| **Status** | Report based on verified secondary evidence (S1–S3). User survey and interviews (S4–S5) are planned validation; no user data have been entered. |
+| **Status** | Report based on verified secondary evidence (S1–S3). Three interviews (S5) were conducted by Kadirbay B.; their summary is linked below and the full records are being added. The user survey (S4) and further interviews are planned validation. |
 
 ## 6.1 Analysis procedure (for interviews S5; the survey S4 uses the rule in [survey/survey-form.md](survey/survey-form.md))
 
@@ -21,6 +21,8 @@ A second team member should check steps 3–5 independently for at least two int
 
 ## 6.2 Evidence of relevance report
 
+> **Update, 24 October 2026.** Three interviews (two target users, I1–I2, and one clinical nutritionist / dietitian, I3) were conducted by Kadirbay B. before 23 October 2026 (confirmed by the team on 24 October 2026). His summary is in [interviews/interview-summary-kadirbay.md](interviews/interview-summary-kadirbay.md). Anonymised records with date, mode and notes (template [05](05-results-template.md)) are being added. Until the records are in the repository, the interview findings are reported as stated in that summary and are not yet used to change the status of assumptions in Section 3.
+>
 > **Status, 22 October 2026.** Item 2 is presented on the basis of **secondary evidence**: analysis of available data, published studies of users of weight-management applications, and a structured comparison of existing systems. All of it is verified against cited sources. **Primary user evidence (online survey and interviews) has not been collected yet.** It is planned as validation and is labelled as such everywhere below. No user responses, quotations or numbers from users are reported in this document.
 
 ### 1. Evidence streams
@@ -31,7 +33,7 @@ A second team member should check steps 3–5 independently for at least two int
 | S2. Published studies of users of digital weight-management tools | Analysis of available data (peer-reviewed studies) | **Complete** | [literature-review.md](literature-review.md), Sections 3.2–3.3 |
 | S3. Comparison of five existing applications on 10 criteria | Observation of relevant systems (official descriptions) | **Complete**; hands-on check pending | [existing-systems.md](existing-systems.md) |
 | S4. Online survey of potential users (Google Forms, RU/KK) | Users' representatives | **Planned validation**: form ready, not yet distributed | [survey/survey-form.md](survey/survey-form.md) |
-| S5. Interviews with 3–4 users and 1 expert | Discussions with users' representatives | **Planned validation**: materials ready, not yet conducted | [03](03-recruitment-and-consent.md), [04](04-interview-guide.md), [05](05-results-template.md) |
+| S5. Interviews with users and 1 expert | Discussions with users' representatives | **3 conducted** (2 users, 1 dietitian) by Kadirbay B.; full records pending | [interview summary](interviews/interview-summary-kadirbay.md), [03](03-recruitment-and-consent.md), [04](04-interview-guide.md), [05](05-results-template.md) |
 
 ### 2. Key findings
 
@@ -66,7 +68,9 @@ A second team member should check steps 3–5 independently for at least two int
 | G3 | None combines local language, local foods and activity data; Kazakh is available in one application only. |
 | G4 | None has been tested against a self-monitoring-only control. |
 
-**S4–S5. What potential users in Astana say: ⏳ not yet collected.** Results will be added here as aggregated survey counts and interview themes, with the number of respondents for each finding.
+**S5. Interviews (n = 3).** Main points as stated in the [interview summary](interviews/interview-summary-kadirbay.md): the two users found calorie-only logging tiring without an explanation of why weight changes, and preferred context-aware suggestions to static diet plans; the dietitian stressed that obesity is multi-factorial and that one-size-fits-all advice fails. These points will be coded with the procedure in Section 6.1 when the full records are added.
+
+**S4. Survey: ⏳ not yet collected.** Results will be added here as aggregated counts, with the number of respondents for each finding.
 
 ### 3. Verified findings versus assumptions
 
@@ -114,7 +118,7 @@ Requirements cite their basis with the source codes defined in [requirements.md]
 | Step | What | Target | Result goes to |
 |---|---|---|---|
 | 1 | Distribute the online survey ([survey/survey-form.md](survey/survey-form.md)) through AITU chats and personal contacts | At least 15 eligible responses | [survey/results.md](survey/results.md) (aggregated counts only) |
-| 2 | Interviews with 3–4 users and 1 expert | Before pre-defense 2 | `interviews/` and this report |
+| 2 | Add full records of the three interviews already held (I1–I3); if needed, 1–2 more user interviews | Before pre-defense 2 | `interviews/` and this report |
 | 3 | Update the assumptions register and the source status of requirements | After steps 1–2 | [02-assumptions-register.md](02-assumptions-register.md), requirements |
 
 ## 6.3 Theme table (working)

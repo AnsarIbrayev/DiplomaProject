@@ -4,4 +4,4 @@ Anonymised interview records for [DOA-4](https://yeralytemir.youtrack.cloud/issu
 
 No names, contact details, exact weight, diagnoses or recordings are stored here (see the template, Section 5.1).
 
-No interviews have been recorded yet.
+Three interviews (I1–I2 users, I3 dietitian) were conducted by Kadirbay B.; his summary is in [interview-summary-kadirbay.md](interview-summary-kadirbay.md). Full records in the template format are being added.
