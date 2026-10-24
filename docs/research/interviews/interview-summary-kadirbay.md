@@ -2,6 +2,8 @@
 
 > Written by Kadirbay B. (commit `c1e3a4e`, 23 October 2026), moved here from the repository root. Pre-defense item 2, [DOA-4](https://yeralytemir.youtrack.cloud/issue/DOA-4). No separate records of interviews I1–I3 were kept; this summary is the only record.
 
+> **Editor's notes (Ibrayev A., 24 October 2026).** (1) Row A1 records the agreed diploma topic; no meeting with the supervisor has taken place yet, and her feedback is pending ([feedback log](../../meetings/2026-10-supervisor-review/feedback-log.md)). (2) The machine-learning module (A1) and the hybrid recommendation algorithm (Section 3) describe an early idea; the project uses a versioned rule base instead (decision D5 in the [technology comparison](../../architecture/technology-comparison.md)). (3) The dataset in Section 2 has not been identified, so the dataset analysis is not used as evidence. (4) Findings marked "Verified" rest on two or three interviews without records; they are treated as preliminary, and the statuses in the [assumptions register](../02-assumptions-register.md) were not changed on their basis.
+
 ## 1 Primary evidence and stakeholder engagement
 
 To ground the system requirements in real needs, evidence was gathered through structured interviews with user representatives and a domain expert, together with a substantive agreement with the project supervisor/client on the project scope.
@@ -17,7 +19,7 @@ To ground the system requirements in real needs, evidence was gathered through s
 
 **Process observation.** Analysis of current mobile health (mHealth) workflows revealed a critical gap: standard apps function mainly as passive logs rather than active decision-support systems. Users log data, but the app does not analyze the underlying obesity drivers or give personalized advice.
 
-**Dataset analysis.** Analysis of a benchmark dataset (a public dataset on obesity levels based on eating habits and physical condition) showed strong non-linear relationships between obesity severity and non-dietary variables such as transportation mode, number of main meals, and daily water intake. [Name the dataset, its size, and the method used, for example feature importance or correlation analysis.]
+**Dataset analysis.** Analysis of a benchmark dataset (a public dataset on obesity levels based on eating habits and physical condition) showed strong non-linear relationships between obesity severity and non-dietary variables such as transportation mode, number of main meals, and daily water intake.
 
 ## 3 Verified findings versus assumptions
 
