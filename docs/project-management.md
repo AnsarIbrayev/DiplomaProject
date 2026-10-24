@@ -89,7 +89,7 @@ The rules are in [CONTRIBUTING.md](../CONTRIBUTING.md). In short:
 | Working branches | Created from `develop`: `feature/`, `fix/` or `docs/<ID>-<description>`. Branches opened by the AI assistant are named `claude/<session>`; their commits and pull requests carry the task ID |
 | Commits | `<type>(<area>): <description> [<ID>]`, for example `docs(evaluation): verification and evaluation plan [DOA-12]` |
 | Pull requests | Into `develop`, using the repository template: YouTrack task, what was done, how to check it, checklist (branch from `develop`, commit format, no secrets or personal data). The project manager approves the content before merge |
-| Tags | `pre-defense-1`, `pre-defense-2`, `final-pre-defense` on the submitted commit of `main`; a tag is never moved after submission |
+| Tags | `prob-period-1` (pre-defense 1, the tag name required by the submission form), `pre-defense-2`, `final-pre-defense` on the submitted commit of `main`; a tag is never moved after submission |
 | Data protection | No secrets, keys or participant data in the repository (NFR-08) |
 
 Traceability chain: **YouTrack task → branch and commits with the task ID → pull request → merged deliverable → task Done with the PR link.** For example, DOA-12 → PR #17 and PR #19 → `docs/evaluation/evaluation-plan.md` → DOA-12 Done.
@@ -108,7 +108,7 @@ Dates are taken from the Start Date and Due Date fields of the YouTrack tasks.
 
 | No. | Milestone | Date | Tasks | Completion evidence |
 |---|---|---|---|---|
-| M1 | **Pre-defense 1** | 24 Oct 2026 | DOA-1 – DOA-15 | Tag `pre-defense-1` on `main`; submission package (DOA-15) |
+| M1 | **Pre-defense 1** | 24 Oct 2026 | DOA-1 – DOA-15 | Tag `prob-period-1` on `main`; submission package (DOA-15) |
 | M2 | Rule base, backend, rule engine and mobile client implemented | 30 Nov 2026 | DOA-16 – DOA-21 | Merged PRs; rule base document; working build on Android |
 | M3 | Control-arm mode and rule-engine verification (SQ1) | 15 Dec 2026 | DOA-22, DOA-23 | `docs/evaluation/verification-report.md`: 0 hard-constraint violations |
 | M4 | Ethics application decided | 31 Dec 2026 | DOA-24 | Decision recorded in `docs/ethics/` without personal data |
@@ -174,13 +174,13 @@ These «depends on» links are set in YouTrack and drive the Gantt chart.
 
 ### 4.2 External dependencies
 
-| Dependency | Needed for | Owner | Status on 22 Oct 2026 |
+| Dependency | Needed for | Owner | Status on 24 Oct 2026 |
 |---|---|---|---|
 | Supervisor review of deliverables | Each pre-defense; open methodological questions | Ansar | Proposal ready for supervisor review (DOA-3 in Review); feedback log in DOA-14 |
 | AITU ethics committee approval | Usability test and pilot (CON-04) | Ansar | Application planned for December 2026 (DOA-24) |
 | Server located in Kazakhstan | Storage of participant data (NFR-06) | Bibarys | Not yet arranged; university server or local provider to be agreed with the supervisor (technology comparison, A3) |
 | AWS Free plan | Development environment with synthetic data only | Bibarys | Selected; free RDS for up to six months for new accounts (technology comparison, Section 9) |
-| Respondents for interviews | Verification of user assumptions A1–A12 (DOA-4) | Ansar | Interview kit ready; interviews not conducted; assumptions unverified |
+| Respondents for interviews | Verification of user assumptions A1–A12 (DOA-4) | Ansar | Three interviews held by Kadirbay B. (summary only, no separate records); survey and recorded interviews before pre-defense 2; assumptions unverified |
 | Pilot participants (target 60) | DOA-25 | Ansar | Recruitment only after ethics approval |
 | Google Health Connect and Apple HealthKit, `health` plugin | Step and heart-rate data (DOA-21) | Yeraly | Selected (technology comparison, D6) |
 | Mac with Xcode and Apple developer account | Building and testing the iOS app, HealthKit on a device | Yeraly | To be confirmed (technology comparison, R3) |
@@ -217,7 +217,7 @@ Each risk is rated by the team on two three-level scales. The ratings are the te
 | R07 | Sending meal text or photos to an external AI service is not approved (cross-border transfer, photos with faces or metadata). | Ethics, legal | 2 | 1 | 2 | Safeguards in the ethics application: no identifiers, metadata removal, opt-out of retention, separate consent (evaluation plan, Section 8.4). | Switch FR-40 off in both arms; manual logging remains complete. | Ansar | DOA-24 |
 | R08 | Cost of the paid AI service exceeds what the team can pay. | Cost | 1 | 2 | 2 | Send short text and compressed photos; set a spending limit in the provider account where available; one backend interface so the provider can be replaced (technology comparison, D7). | Switch the feature off; it does not affect any other function. | Bibarys | DOA-17 |
 | R09 | AWS free use ends before the move to Kazakhstan, so development hosting starts to cost money. | Cost, infrastructure | 2 | 1 | 2 | Free RDS lasts up to six months for new accounts (technology comparison, A2); the move is planned before February 2027; only synthetic data are stored there. | Run the development database locally or on the Kazakhstan server earlier. | Bibarys | DOA-17 |
-| R10 | User interviews (DOA-4) are not conducted, so user assumptions A1–A12 stay unverified. | Requirements | 3 | 2 | **6** | Requirements that depend on unverified assumptions are labelled and listed (requirements, Section 6.3); the January usability test and pilot feasibility data provide user evidence later. | Report the assumptions as a limitation in the thesis; adjust thresholds after the usability test. | Ansar | DOA-4, DOA-8 |
+| R10 | User evidence (DOA-4) stays limited: three interviews without separate records and no survey yet, so user assumptions A1–A12 stay unverified. | Requirements | 3 | 2 | **6** | Requirements that depend on unverified assumptions are labelled and listed (requirements, Section 6.3); the January usability test and pilot feasibility data provide user evidence later. | Report the assumptions as a limitation in the thesis; adjust thresholds after the usability test. | Ansar | DOA-4, DOA-8 |
 | R11 | A recommendation is unsafe or wrong for a user profile (rule error). | Safety, quality | 2 | 3 | **6** | Hard-constraint checker; verification on 200 synthetic profiles with 0 violations required (SQ1); eligibility screening and PAR-Q+; weekly adverse-event check-in (evaluation plan, Sections 4, 8). | Suspend recommendations for the affected account (FR-29); stopping rule: pause enrollment and review with the supervisor. | Ansar | DOA-16, DOA-23, DOA-25 |
 | R12 | iOS build and HealthKit testing are blocked without a Mac, Xcode and an Apple developer account. | Technical | 2 | 2 | 4 | Confirm access early; develop and test on Android first (technology comparison, R3). | Limit the pilot to Android users and report this as a limitation. | Yeraly | DOA-19 – DOA-21 |
 | R13 | Wearable and step data are incomplete because of platform limits, permissions or changes in the `health` plugin. | Technical | 2 | 2 | 4 | Pin the plugin version; phone step counter as default source; one step source per participant (technology comparison, R2; evaluation plan, Section 9). | Report data completeness as a feasibility outcome; analyse H3 on valid days only. | Yeraly | DOA-21 |
@@ -260,3 +260,4 @@ L = likelihood, I = impact (Section 5).
 |---|---|---|
 | 1.0 | 22 Oct 2026 | First version for pre-defense 1 |
 | 1.1 | 22 Oct 2026 | January 2027 tasks DOA-28 – DOA-31 added to milestones, schedule and dependencies |
+| 1.2 | 24 Oct 2026 | Submission tag `prob-period-1`; status of the DOA-4 interviews in dependencies and risk R10 |

@@ -7,7 +7,8 @@
 | **Supervisor** | Kashkimbayeva Nurzhamal Meirkulovna |
 | **Date** | 24 October 2026 |
 | **Repository** | https://github.com/AnsarIbrayev/DiplomaProject |
-| **Submitted version** | Git tag `pre-defense-1` (https://github.com/AnsarIbrayev/DiplomaProject/tree/pre-defense-1) |
+| **Submitted version** | Git tag `prob-period-1` (https://github.com/AnsarIbrayev/DiplomaProject/tree/prob-period-1); tag `pre-defense-1` marks the first merge of the same work into `main` |
+| **Online prototype** | https://claude.ai/artifact/R7UrdujHwhD1bVwGGv4BXE (web build of [mobile/](../../mobile/), synthetic demo data) |
 | **YouTrack** | https://yeralytemir.youtrack.cloud/projects/DOA |
 | **YouTrack task** | [DOA-15](https://yeralytemir.youtrack.cloud/issue/DOA-15) |
 
@@ -18,7 +19,7 @@
 | No. | Component | Deliverable | YouTrack | Pull requests |
 |---|---|---|---|---|
 | 1 | Project proposal | [docs/proposal/proposal.md](../proposal/proposal.md): title, team, supervisor, problem statement, target users, aim, objectives O1–O4, hypotheses, expected outcomes, scope, engineering complexity | DOA-3 | #5 |
-| 2 | Evidence of relevance | [docs/research/relevance-summary.md](../research/relevance-summary.md): verified secondary evidence (statistics, studies of app users, gaps of existing apps), three interviews (two users, one dietitian; [summary](../research/interviews/interview-summary-kadirbay.md)), assumptions register, survey and interview kit | DOA-4 | #6, #8, #20, #27, #28 |
+| 2 | Evidence of relevance | [docs/research/relevance-summary.md](../research/relevance-summary.md): verified secondary evidence (statistics, studies of app users, gaps of existing apps), three interviews (two users, one dietitian; [summary](../research/interviews/interview-summary-kadirbay.md)), assumptions register, survey and interview kit | DOA-4 | #6, #8, #20, #27, #28, #32 |
 | 3 | Literature review | [docs/research/literature-review.md](../research/literature-review.md): critical review and analysis table, 27 sources; registry in [research/literature/](../../research/literature/README.md) | DOA-5 | #9 |
 | 4 | Existing system comparison | [docs/research/existing-systems.md](../research/existing-systems.md): systems compared on a fixed set of criteria, with dated evidence | DOA-6 | #10 |
 | 5 | Technology comparison | [docs/architecture/technology-comparison.md](../architecture/technology-comparison.md): seven decisions (D1–D7) with alternatives and justification from the requirements | DOA-7 | #12, #15 |
@@ -37,7 +38,7 @@
 3. **Prototype.** The prototype has no backend, database, notifications or wearable connection. It uses one synthetic demo profile; food nutrient values are illustrative and are not taken from a verified food composition table. AI-assisted food logging is simulated. The prototype rule base contains placeholder values marked (T).
 4. **Team-set values.** Values marked (T) in the requirements and the evaluation plan are design choices of the team, not findings from data, and are subject to supervisor approval.
 5. **Not yet implemented.** Backend, production rule engine and verification code (`backend/`, `ml/`). Thesis chapters in `docs/thesis/` are outlines.
-6. **Review process.** Pull requests #5–#28 were merged into `develop` without a recorded GitHub review by another team member; content was agreed within the team outside GitHub.
+6. **Review process.** Pull requests #5–#32 were merged into `develop` without a recorded GitHub review by another team member; content was agreed within the team outside GitHub.
 
 ## 3. Outstanding Tasks
 
@@ -62,5 +63,5 @@
 1. **Repository structure:** [README.md](../../README.md), Section 8.
 2. **Trace a task to its deliverable:** YouTrack [DOA-8](https://yeralytemir.youtrack.cloud/issue/DOA-8) → branch `docs/DOA-8-requirements` → pull request #11 → [requirements.md](../requirements/requirements.md). The VCS tab of each YouTrack task lists the commits that mention it.
 3. **Requirement → use case → screen:** FR in [requirements.md](../requirements/requirements.md) → UC in [use-cases.md](../architecture/use-cases.md) → screen in [docs/prototype/README.md](../prototype/README.md).
-4. **Run and test the prototype:** `cd mobile && flutter pub get && flutter test && flutter run -d chrome`.
+4. **Run and test the prototype:** open the [online web build](https://claude.ai/artifact/R7UrdujHwhD1bVwGGv4BXE), or run it locally: `cd mobile && flutter pub get && flutter test && flutter run -d chrome`.
 5. **History:** `git log --oneline develop`; each commit message carries its task ID.
