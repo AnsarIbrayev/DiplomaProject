@@ -4,6 +4,9 @@ Clickable prototype of the mobile recommender system (pre-defense item 8, [DOA-1
 
 ## Run
 
+Online demo without installation: [web build of the prototype](https://claude.ai/artifact/R7UrdujHwhD1bVwGGv4BXE).
+
+
 ```bash
 flutter pub get
 flutter run -d chrome   # browser
