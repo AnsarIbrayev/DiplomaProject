@@ -7,7 +7,7 @@
 | **YouTrack task** | [DOA-14](https://yeralytemir.youtrack.cloud/issue/DOA-14) |
 | **Supervisor** | Kashkimbayeva Nurzhamal Meirkulovna (Кашкимбаева Нуржамал Мейркуловна) |
 | **Prepared by** | Ibrayev Ansar Umurzakovich (project manager), on behalf of the team |
-| **Version / date** | 1.0, 22 October 2026 |
+| **Version / date** | 1.1, 24 October 2026 |
 | **Pre-defense date** | 24 October 2026 |
 
 ---
@@ -27,19 +27,19 @@ The supervisor's feedback itself is written only by the supervisor. The team rec
 
 ---
 
-## 2. Status of Deliverables (22 October 2026)
+## 2. Status of Deliverables (24 October 2026)
 
-All documents are in the `develop` branch of the repository. Links are relative to this file.
+All documents are in the `main` branch of the repository; the submitted version is tagged `prob-period-1`. Links are relative to this file.
 
 | # | Deliverable | Document | Task | Status | What we ask the supervisor to check |
 |---|---|---|---|---|---|
 | 1 | Project proposal | [proposal.md](../../proposal/proposal.md) | DOA-3 | Draft 1.0, ready for review | Aim, research question SQ1, objectives O1–O4, hypotheses H1–H3, scope |
-| 2 | Evidence of relevance | [relevance-summary.md](../../research/relevance-summary.md) | DOA-4 | Report based on verified secondary evidence: published statistics (WHO, NCD-RisC, GBD 2021, WHO STEPS Kazakhstan 2021–2022), literature and the existing-system comparison. User interviews have not been conducted; an anonymous online survey ([survey-form.md](../../research/survey/survey-form.md)) is planned as validation, no user data entered yet | Whether this evidence is sufficient for pre-defense 1 (question A2) |
+| 2 | Evidence of relevance | [relevance-summary.md](../../research/relevance-summary.md) | DOA-4 | Report based on verified secondary evidence: published statistics (WHO, NCD-RisC, GBD 2021, WHO STEPS Kazakhstan 2021–2022), literature and the existing-system comparison. Three interviews (two users, one dietitian) were held by Kadirbay B.; only a summary exists ([interview summary](../../research/interviews/interview-summary-kadirbay.md)). An anonymous online survey ([survey-form.md](../../research/survey/survey-form.md)) is planned as validation; no survey data entered yet | Whether this evidence is sufficient for pre-defense 1 (question A2) |
 | 3 | Literature review | [literature-review.md](../../research/literature-review.md) | DOA-5 | Complete, 27 sources with an analysis table | Source selection and identified limitations L1–L16 |
 | 4 | Existing system comparison | [existing-systems.md](../../research/existing-systems.md) | DOA-6 | Complete: 5 applications, 10 criteria | Choice of systems and criteria |
 | 5 | Technology comparison | [technology-comparison.md](../../architecture/technology-comparison.md) | DOA-7 | Complete: 7 decisions (D1–D7) with alternatives | Selected stack: Flutter, FastAPI, PostgreSQL, rule-based engine, AI only for food-logging pre-fill |
 | 6 | Functional and non-functional requirements | [requirements.md](../../requirements/requirements.md) | DOA-8 | Complete, v1.4: 40 FR and 28 NFR with priorities and acceptance criteria | Priorities and acceptance criteria |
-| 7 | Diagrams (context, use case, component) | [docs/architecture/](../../architecture/) | DOA-9, DOA-10 | In progress, due 23 October 2026 | Will be sent as soon as merged |
+| 7 | Diagrams (context, use case, component) | [docs/architecture/](../../architecture/) | DOA-9, DOA-10 | Complete: context, use case and component (draft) diagrams; PlantUML sources with PNG / SVG exports; 28 use cases | Whether the system boundary and the components are complete |
 | 8 | UX prototype | [prototype/README.md](../../prototype/README.md), code in [`mobile/`](../../../mobile/) | DOA-11 | Complete, v0.1 clickable Flutter app. All data are synthetic; food values are illustrative placeholders | Coverage of the key user scenarios |
 | 9 | Verification and evaluation plan | [evaluation-plan.md](../../evaluation/evaluation-plan.md) | DOA-12 | Complete, v1.1. Values marked (T) need confirmation (question B1) | Pilot design, outcome definitions, analysis |
 | 10 | Project management and risks | [project-management.md](../../project-management.md) | DOA-13 | Complete, v1.0: roles, workflow, milestones, dependencies, risk register with 17 risks | Milestones and high risks (ethics approval, recruitment, server in Kazakhstan) |
@@ -111,6 +111,5 @@ The prototype also contains placeholder rule thresholds marked (T) ([prototype/R
 | Step | Action | Who |
 |---|---|---|
 | 1 | Send the cover message ([cover-message-ru.md](cover-message-ru.md)) with this package and the feedback form | Ansar Ibrayev |
-| 2 | If the supervisor has no repository access, attach PDF exports of deliverables 1–6 and 8–10 | Ansar Ibrayev |
-| 3 | Send the diagrams (7) as soon as they are merged | Ansar Ibrayev |
-| 4 | Record the feedback in the log and open pull requests for the changes | Team |
+| 2 | Attach the consolidated PDF report of all 11 items submitted with the pre-defense form (tag `prob-period-1`) | Ansar Ibrayev |
+| 3 | Record the feedback in the log and open pull requests for the changes | Team |
