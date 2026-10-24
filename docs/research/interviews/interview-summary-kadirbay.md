@@ -1,6 +1,6 @@
 # Evidence of Relevance
 
-> Written by Kadirbay B. (commit `c1e3a4e`, 23 October 2026), moved here from the repository root. Pre-defense item 2, [DOA-4](https://yeralytemir.youtrack.cloud/issue/DOA-4). Full anonymised records of interviews I1–I3 are being added to this folder.
+> Written by Kadirbay B. (commit `c1e3a4e`, 23 October 2026), moved here from the repository root. Pre-defense item 2, [DOA-4](https://yeralytemir.youtrack.cloud/issue/DOA-4). No separate records of interviews I1–I3 were kept; this summary is the only record.
 
 ## 1 Primary evidence and stakeholder engagement
 
