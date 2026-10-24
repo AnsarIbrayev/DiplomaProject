@@ -1,11 +1,11 @@
-## Задача YouTrack
+## YouTrack task
 
-## Что сделано
+## What was done
 
-## Как проверить
+## How to check
 
-## Чек-лист
+## Checklist
 
-- [ ] Ветка создана от `develop`
-- [ ] Коммиты по формату из `CONTRIBUTING.md`
-- [ ] Нет секретов и персональных данных
+- [ ] Branch created from `develop`
+- [ ] Commits follow the format in `CONTRIBUTING.md`
+- [ ] No secrets or personal data

@@ -1,42 +1,42 @@
-# Правила работы с репозиторием
+# Repository Workflow
 
-## Ветки
+## Branches
 
-| Ветка | Назначение |
+| Branch | Purpose |
 |---|---|
-| `main` | стабильная версия, только через Pull Request |
-| `develop` | текущая разработка |
-| `feature/<ID>-<описание>` | новая функциональность, например `feature/DIP-12-onboarding` |
-| `fix/<ID>-<описание>` | исправление ошибок |
-| `docs/<ID>-<описание>` | текст диплома и документация |
+| `main` | Stable version, changed only through pull requests |
+| `develop` | Ongoing development |
+| `feature/<ID>-<description>` | New functionality, for example `feature/DOA-19-onboarding` |
+| `fix/<ID>-<description>` | Bug fixes |
+| `docs/<ID>-<description>` | Thesis text and documentation |
 
-`<ID>` — номер задачи в YouTrack.
+`<ID>` is the task ID in YouTrack.
 
-## Коммиты
+## Commits
 
-Формат: `<тип>(<область>): <описание> [<ID>]`
+Format: `<type>(<area>): <description> [<ID>]`
 
-| Тип | Когда |
+| Type | When |
 |---|---|
-| `feat` | новая функциональность |
-| `fix` | исправление ошибки |
-| `docs` | текст диплома, README, документация |
-| `ml` | модели, датасеты, эксперименты |
-| `refactor` | улучшение кода без изменения поведения |
-| `test` | тесты |
-| `chore` | настройки, зависимости |
+| `feat` | New functionality |
+| `fix` | Bug fix |
+| `docs` | Thesis text, README, documentation |
+| `ml` | Models, datasets, experiments |
+| `refactor` | Code improvement without a change in behavior |
+| `test` | Tests |
+| `chore` | Configuration, dependencies |
 
-Примеры:
+Examples:
 
 ```
-feat(mobile): экран онбординга [DIP-12]
-docs(thesis): глава 1, обзор литературы [DIP-5]
-ml(model): baseline на gradient boosting [DIP-20]
+feat(mobile): onboarding screen [DOA-19]
+docs(thesis): chapter 1, literature review [DOA-5]
+ml(rules): rule engine verification on synthetic profiles [DOA-23]
 ```
 
-## Pull Request
+## Pull Requests
 
-1. Создать ветку от `develop`.
-2. Открыть PR в `develop`, указать задачу YouTrack.
-3. Минимум одно ревью от участника команды.
-4. Merge после одобрения.
+1. Create a branch from `develop`.
+2. Open a pull request into `develop` and name the YouTrack task.
+3. At least one review by a team member.
+4. Merge after approval.

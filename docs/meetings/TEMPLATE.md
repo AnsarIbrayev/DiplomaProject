@@ -1,13 +1,13 @@
-# Встреча с руководителем — ГГГГ-ММ-ДД
+# Meeting with the Supervisor — YYYY-MM-DD
 
-**Участники:**
+**Participants:**
 
-## Обсудили
+## Discussed
 
-## Решения
+## Decisions
 
-## Задачи до следующей встречи
+## Tasks before the next meeting
 
-| Задача | Ответственный | Срок |
+| Task | Owner | Deadline |
 |---|---|---|
 | | | |

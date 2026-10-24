@@ -1,97 +1,97 @@
-# Отзыв руководителя о готовности к пре-защите 1 / Supervisor Feedback, Pre-Defense 1
+# Supervisor Feedback, Pre-Defense 1
 
-Заполняется руководителем. Форма необязательна: отзыв можно дать в любом виде (письмо, встреча, комментарии в GitHub). Если в AITU есть официальная форма отзыва руководителя, используется она.
+To be filled in by the supervisor. The form is optional: feedback can be given in any form (e-mail, a meeting, comments on GitHub). If AITU has an official supervisor feedback form, that form is used instead.
 
 | | |
 |---|---|
-| **Тема** | «Разработка мобильной рекомендательной системы для выявления факторов ожирения и персонализированного управления весом» |
-| **Команда** | Ибраев Ансар Умурзакович, Темирбулатов Ералы Чингизович, Кәдірбай Бибарыс Асылханұлы |
-| **Руководитель** | Кашкимбаева Нуржамал Мейркуловна |
-| **Дата отзыва** | |
+| **Topic** | "Development of a Mobile Recommender System for Identifying Obesity Factors and Personalized Weight Management" |
+| **Team** | Ibrayev Ansar Umurzakovich, Temirbulatov Yeraly Chingizovich, Kadirbay Bibarys Asylkhanuly |
+| **Supervisor** | Kashkimbayeva Nurzhamal Meirkulovna |
+| **Date of feedback** | |
 
 ---
 
-## 1. Общая оценка / Overall assessment
+## 1. Overall assessment
 
-Отметьте один вариант:
+Tick one option:
 
-- [ ] Команда готова к пре-защите 1
-- [ ] Готова при условии исправления замечаний ниже
-- [ ] Не готова (укажите причины ниже)
+- [ ] The team is ready for pre-defense 1
+- [ ] Ready, provided the comments below are addressed
+- [ ] Not ready (state the reasons below)
 
-Комментарий:
+Comment:
 
 &nbsp;
 
 ---
 
-## 2. Замечания по пунктам / Comments by deliverable
+## 2. Comments by deliverable
 
-| # | Пункт / Deliverable | Замечания и рекомендации |
+| # | Deliverable | Comments and recommendations |
 |---|---|---|
-| 1 | Предложение проекта / Project proposal | |
-| 2 | Обоснование актуальности / Evidence of relevance | |
-| 3 | Обзор литературы / Literature review | |
-| 4 | Сравнение существующих систем / Existing system comparison | |
-| 5 | Сравнение технологий / Technology comparison | |
-| 6 | Требования FR/NFR / Requirements | |
-| 7 | Диаграммы / Diagrams | |
-| 8 | Прототип / UX prototype | |
-| 9 | План верификации и оценки / Evaluation plan | |
-| 10 | Управление проектом и риски / Project management and risks | |
-| – | Работа команды, репозиторий, YouTrack / Teamwork, repository, task tracking | |
+| 1 | Project proposal | |
+| 2 | Evidence of relevance | |
+| 3 | Literature review | |
+| 4 | Existing system comparison | |
+| 5 | Technology comparison | |
+| 6 | Requirements (FR/NFR) | |
+| 7 | Diagrams | |
+| 8 | UX prototype | |
+| 9 | Verification and evaluation plan | |
+| 10 | Project management and risks | |
+| – | Teamwork, repository, task tracking (YouTrack) | |
 
 ---
 
-## 3. Ответы на вопросы / Answers to questions
+## 3. Answers to questions
 
-Вопросы подробно описаны в пакете ([README.md](README.md), раздел 3).
+The questions are described in detail in the package ([README.md](README.md), Section 3).
 
-### Часть A. До пре-защиты 24.10
+### Part A. Before pre-defense 1 (24 October 2026)
 
-| # | Вопрос | Ответ |
+| # | Question | Answer |
 |---|---|---|
-| A1 | Утверждаете ли предложение проекта? Что изменить? | ☐ Утверждаю ☐ Утверждаю с изменениями ☐ Не утверждаю<br>Комментарий: |
-| A2 | Достаточно ли для пре-защиты 1 обоснования актуальности по статистике и литературе, с анонимным онлайн-опросом позже? Или нужны 3–5 интервью до 24.10? | ☐ Достаточно ☐ Нужны интервью<br>Комментарий: |
-| A3 | Нужно ли одобрение этического комитета для анонимного опроса или интервью (без измерений, точного веса и диагнозов)? | ☐ Не нужно ☐ Нужно<br>Комментарий: |
-| A4 | Удобный способ проверки | ☐ Доступ к GitHub, логин: ________ ☐ Комментарии в pull request ☐ PDF по почте ☐ Встреча |
+| A1 | Do you approve the project proposal? What should be changed? | ☐ Approved ☐ Approved with changes ☐ Not approved<br>Comment: |
+| A2 | Is evidence of relevance based on statistics and literature, with an anonymous online survey later, sufficient for pre-defense 1? Or are 3–5 interviews needed before 24 October? | ☐ Sufficient ☐ Interviews needed<br>Comment: |
+| A3 | Is ethics committee approval needed for an anonymous survey or interviews (no measurements, exact weight or diagnoses)? | ☐ Not needed ☐ Needed<br>Comment: |
+| A4 | Preferred way to review | ☐ GitHub access, login: ________ ☐ Comments on pull requests ☐ PDF by e-mail ☐ Meeting |
 
-### Часть B. До утверждения плана оценки (январь 2027)
+### Part B. Before the evaluation plan is approved (January 2027)
 
-**B1. Значения, заданные командой (T).** Отметьте, согласны ли Вы, или укажите изменение.
+**B1. Team-set values (T).** Tick whether you agree, or state a change.
 
-| # | Значение | Предложение команды | Согласна | Изменить на |
+| # | Value | Team proposal | Agree | Change to |
 |---|---|---|---|---|
-| T1 | Рандомизация | Блоки случайного размера 2 и 4, стратификация по полу и классу ИМТ (25,0–29,9 и 30,0–34,9) | ☐ | |
-| T2 | Окна визитов | Недели 6 и 12, ±7 дней | ☐ | |
-| T3 | Время взвешивания | По возможности в то же время суток, что на первом визите | ☐ | |
-| T4 | Ответ на напоминание | Шаги за 60 минут после напоминания выше среднего почасового уровня в активные часы базовой недели | ☐ | |
-| T5 | Валидные дни для шагов | Не менее 4 дней с данными в базовую неделю и в недели 11–12 | ☐ | |
-| T6 | Серьёзное нежелательное явление | Госпитализация или невозможность обычной деятельности | ☐ | |
-| T7 | Per-protocol | Визит недели 12 и хотя бы одна запись в каждую из недель 2–12 | ☐ | |
-| T8 | Пропущенные данные | Множественная импутация (MICE), 20 импутаций | ☐ | |
-| T9 | Точность AI для записи еды | Верный продукт в топ-3 для ≥ 80% тестовых блюд | ☐ | |
-| T10 | Проверка правил | 200 синтетических профилей, плюс 12 симулированных недель | ☐ | |
-| T11 | Юзабилити-тест | 6 участников (по 2 на язык), около 45 минут; все критические проблемы исправить до набора | ☐ | |
-| T12 | Уровни дефектов | Critical, major, minor | ☐ | |
-| T13 | Правило остановки | Пауза при серьёзном явлении, возможно связанном с рекомендацией | ☐ | |
-| T14 | Контрольная группа после пилота | Полная версия после визита недели 12, если одобрит этический комитет | ☐ | |
+| T1 | Randomization | Blocks of random size 2 and 4, stratified by sex and BMI class (25.0–29.9 and 30.0–34.9) | ☐ | |
+| T2 | Visit windows | Weeks 6 and 12, ±7 days | ☐ | |
+| T3 | Time of weighing | Where possible, the same time of day as at the first visit | ☐ | |
+| T4 | Prompt response | Steps in the 60 minutes after a prompt exceed the mean hourly level during the active hours of the baseline week | ☐ | |
+| T5 | Valid step days | At least 4 days with data in the baseline week and in weeks 11–12 | ☐ | |
+| T6 | Serious adverse event | Hospitalization or inability to carry out usual activities | ☐ | |
+| T7 | Per-protocol | Week 12 visit and at least one log entry in each of weeks 2–12 | ☐ | |
+| T8 | Missing data | Multiple imputation (MICE), 20 imputations | ☐ | |
+| T9 | AI food-logging accuracy | Correct food in the top 3 for ≥ 80% of test dishes | ☐ | |
+| T10 | Rule verification | 200 synthetic profiles, plus 12 simulated weeks | ☐ | |
+| T11 | Usability test | 6 participants (2 per language), about 45 minutes; all critical problems fixed before recruitment | ☐ | |
+| T12 | Defect levels | Critical, major, minor | ☐ | |
+| T13 | Stopping rule | Pause on a serious event possibly related to a recommendation | ☐ | |
+| T14 | Control arm after the pilot | Full version after the week 12 visit, if the ethics committee approves | ☐ | |
 
-| # | Вопрос | Ответ |
+| # | Question | Answer |
 |---|---|---|
-| B2 | Есть ли сервер AITU в Казахстане для пилота (февраль–апрель 2027) или арендовать у местного провайдера? | |
-| B3 | Распространяется ли требование о хранении персональных данных в РК (ст. 12 Закона) на университетский исследовательский прототип? Кто в AITU может это подтвердить? | |
-| B4 | Можно ли отправлять фото или описание еды участников внешнему AI-сервису? | ☐ Да ☐ Нет ☐ Решит этический комитет |
-| B5 | Нужно ли отдельное одобрение этики для юзабилити-теста до пилота? | |
-| B6 | Может ли измерения на неделях 6 и 12 проводить человек вне команды (например, волонтёр AITU)? | |
-| B7 | Регистрировать ли пилот в открытом реестре исследований? | ☐ Да ☐ Нет ☐ Обсудить |
+| B2 | Is there an AITU server in Kazakhstan for the pilot (February–April 2027), or should one be rented from a local provider? | |
+| B3 | Does the requirement to store personal data in Kazakhstan (Article 12 of the Law) apply to a university research prototype? Who at AITU can confirm this? | |
+| B4 | May participants' meal photos or descriptions be sent to an external AI service? | ☐ Yes ☐ No ☐ The ethics committee will decide |
+| B5 | Is separate ethics approval needed for the usability test before the pilot? | |
+| B6 | May the week 6 and week 12 measurements be taken by a person outside the team (for example, an AITU volunteer)? | |
+| B7 | Should the pilot be registered in a public trial registry? | ☐ Yes ☐ No ☐ To be discussed |
 
 ---
 
-## 4. Прочие рекомендации / Other recommendations
+## 4. Other recommendations
 
 &nbsp;
 
 ---
 
-Руководитель: Кашкимбаева Н. М. &nbsp;&nbsp;&nbsp; Подпись: ____________ &nbsp;&nbsp;&nbsp; Дата: ____________
+Supervisor: Kashkimbayeva N. M. &nbsp;&nbsp;&nbsp; Signature: ____________ &nbsp;&nbsp;&nbsp; Date: ____________

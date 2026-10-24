@@ -1,13 +1,13 @@
-# 3. Реализация системы
+# 3. System Implementation
 
-## 3.1 Выбор технологий
+## 3.1 Technology selection
 
-## 3.2 Реализация мобильного приложения
+## 3.2 Mobile application implementation
 
-## 3.3 Реализация серверной части
+## 3.3 Server-side implementation
 
-## 3.4 Подготовка данных и обучение модели
+## 3.4 Data preparation and model training
 
-## 3.5 Интеграция компонентов
+## 3.5 Component integration
 
-## 3.6 Выводы по главе
+## 3.6 Chapter conclusions
