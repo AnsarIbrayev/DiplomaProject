@@ -19,8 +19,8 @@ This package asks the supervisor to review the pre-defense 1 deliverables and to
 | File | Content | For whom |
 |---|---|---|
 | This file | Status of deliverables 1–10 and the questions for the supervisor | Supervisor |
-| [cover-message-ru.md](cover-message-ru.md) | Cover message to send with the package (Russian), e-mail and short messenger versions | Team (sender) |
-| [feedback-form.md](feedback-form.md) | Feedback form the supervisor may fill in (Russian, with English item names). Optional: comments in any form are accepted | Supervisor |
+| [cover-message.md](cover-message.md) | Cover message to send with the package, e-mail and short messenger versions | Team (sender) |
+| [feedback-form.md](feedback-form.md) | Feedback form the supervisor may fill in. Optional: comments in any form are accepted | Supervisor |
 | [feedback-log.md](feedback-log.md) | Register of every supervisor comment, the team's decision and the change made | Team |
 
 The supervisor's feedback itself is written only by the supervisor. The team records it verbatim in the feedback log and does not paraphrase it as approval.
@@ -110,6 +110,6 @@ The prototype also contains placeholder rule thresholds marked (T) ([prototype/R
 
 | Step | Action | Who |
 |---|---|---|
-| 1 | Send the cover message ([cover-message-ru.md](cover-message-ru.md)) with this package and the feedback form | Ansar Ibrayev |
+| 1 | Send the cover message ([cover-message.md](cover-message.md)) with this package and the feedback form | Ansar Ibrayev |
 | 2 | Attach the consolidated PDF report of all 11 items submitted with the pre-defense form (tag `prob-period-1`) | Ansar Ibrayev |
 | 3 | Record the feedback in the log and open pull requests for the changes | Team |

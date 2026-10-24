@@ -1,13 +1,13 @@
-# Введение
+# Introduction
 
-## Актуальность
+## Relevance
 
-## Цель работы
+## Aim of the work
 
-## Задачи
+## Objectives
 
-## Объект и предмет исследования
+## Object and subject of the study
 
-## Научная новизна
+## Scientific novelty
 
-## Практическая значимость
+## Practical significance

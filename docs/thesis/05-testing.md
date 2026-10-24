@@ -1,11 +1,11 @@
-# 4. Тестирование и оценка
+# 4. Testing and Evaluation
 
-## 4.1 Методика тестирования
+## 4.1 Testing methodology
 
-## 4.2 Оценка качества модели
+## 4.2 Model quality evaluation
 
-## 4.3 Функциональное тестирование
+## 4.3 Functional testing
 
-## 4.4 Юзабилити-тестирование
+## 4.4 Usability testing
 
-## 4.5 Выводы по главе
+## 4.5 Chapter conclusions

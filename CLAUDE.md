@@ -1,23 +1,23 @@
-# Контекст проекта
+# Project Context
 
-Дипломная работа, Astana IT University, School of Software Engineering.
+Diploma project, Astana IT University, School of Software Engineering.
 
-Тема: «Разработка мобильной рекомендательной системы для выявления факторов ожирения и персонализированного управления весом».
+Topic: "Development of a Mobile Recommender System for Identifying Obesity Factors and Personalized Weight Management" (original title: «Разработка мобильной рекомендательной системы для выявления факторов ожирения и персонализированного управления весом»).
 
-Команда: Ибраев Ансар, Темирбулатов Ералы, Кәдірбай Бибарыс.
+Team: Ibrayev Ansar, Temirbulatov Yeraly, Kadirbay Bibarys.
 
-## Компоненты
+## Components
 
-- `mobile/` — мобильное приложение
-- `backend/` — серверная часть и API
-- `ml/` — модель выявления факторов ожирения и рекомендаций
-- `docs/thesis/` — текст дипломной работы
-- `research/` — литература и датасеты
+- `mobile/` — mobile application
+- `backend/` — server side and API
+- `ml/` — model for identifying obesity factors and generating recommendations
+- `docs/thesis/` — thesis text
+- `research/` — literature and datasets
 
-## Правила
+## Rules
 
-- Задачи ведутся в YouTrack: https://yeralytemir.youtrack.cloud. В коммитах и ветках указывать ID задачи.
-- Ветки и коммиты — по `CONTRIBUTING.md`.
-- Не выдумывать данные, метрики и источники.
-- Не коммитить секреты, ключи и персональные данные пользователей.
-- Результаты реализации (архитектура, стек, метрики модели) фиксировать в `docs/architecture/` для описания в дипломе.
+- Tasks are tracked in YouTrack: https://yeralytemir.youtrack.cloud. Branches and commits include the task ID.
+- Branches and commits follow `CONTRIBUTING.md`.
+- Do not invent data, metrics or sources.
+- Do not commit secrets, keys or users' personal data.
+- Record implementation results (architecture, stack, model metrics) in `docs/architecture/` for use in the thesis.

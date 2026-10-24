@@ -126,7 +126,7 @@ The proposed system is a research prototype. It does not aim to match the commer
 
 ### 5.3 Use in the thesis
 
-This comparison feeds Section 1.2 «Обзор существующих решений» of the thesis ([02-domain-analysis.md](../thesis/02-domain-analysis.md)) and the requirements specification (DOA-8).
+This comparison feeds Section 1.2 "Review of existing solutions" of the thesis ([02-domain-analysis.md](../thesis/02-domain-analysis.md)) and the requirements specification (DOA-8).
 
 ---
 
@@ -136,7 +136,7 @@ Criteria C4 and C8 cannot be assessed from official descriptions. The DOA-6 acce
 
 | Check | Procedure | Result to record |
 |---|---|---|
-| H1. Local foods (C4) | Search for five dishes in Russian: «бешбармак», «баурсак», «куырдак», «манты», «казы» | For each app: number of the five dishes found, one screenshot per app |
+| H1. Local foods (C4) | Search for five dishes in Russian: «бешбармак» (beshbarmak), «баурсак» (baursak), «куырдак» (kuyrdak), «манты» (manty), «казы» (kazy) | For each app: number of the five dishes found, one screenshot per app |
 | H2. Safety screening (C8) | Go through onboarding as a new user | Whether the app asks about pregnancy, diabetes, eating disorders, medication or exercise contraindications, and whether it refers anyone to a doctor |
 | H3. Explanation (C8) | Open the calorie target and any recommendation or suggestion screen | Whether the app shows why the target or recommendation was given and on what source |
 

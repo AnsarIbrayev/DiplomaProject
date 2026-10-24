@@ -1,11 +1,11 @@
-# 1. Анализ предметной области
+# 1. Domain Analysis
 
-## 1.1 Ожирение и факторы риска
+## 1.1 Obesity and its risk factors
 
-## 1.2 Обзор существующих решений
+## 1.2 Review of existing solutions
 
-## 1.3 Рекомендательные системы в здравоохранении
+## 1.3 Recommender systems in healthcare
 
-## 1.4 Методы машинного обучения для выявления факторов ожирения
+## 1.4 Machine learning methods for identifying obesity factors
 
-## 1.5 Выводы по главе
+## 1.5 Chapter conclusions

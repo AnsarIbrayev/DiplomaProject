@@ -1,15 +1,15 @@
 ---
-name: Ошибка
-about: Сообщить об ошибке
+name: Bug
+about: Report a bug
 labels: bug
 ---
 
-## Что произошло
+## What happened
 
-## Шаги воспроизведения
+## Steps to reproduce
 
 1.
 
-## Ожидаемый результат
+## Expected result
 
-## Устройство / окружение
+## Device / environment
