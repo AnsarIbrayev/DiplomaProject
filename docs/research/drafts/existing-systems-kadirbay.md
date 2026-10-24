@@ -1,4 +1,6 @@
 # Comparison of Existing Systems
+
+> Draft by Kadirbay B. (commit `c1e3a4e`, 23 October 2026), moved here from the repository root. The submitted comparison for pre-defense item 4 is [existing-systems.md](../existing-systems.md) ([DOA-6](https://yeralytemir.youtrack.cloud/issue/DOA-6)); placeholders such as `[cite]` in this draft are still open.
 ## 1 Selection of systems and criteria
 
 To assess the current state of mobile health (mHealth) solutions for weight management and obesity factor analysis, four representative systems were selected. Together they cover the main product types on the market: calorie logging, behavioral coaching, and wearable-based monitoring.

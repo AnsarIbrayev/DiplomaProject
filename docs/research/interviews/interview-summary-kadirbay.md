@@ -1,5 +1,7 @@
 # Evidence of Relevance
 
+> Written by Kadirbay B. (commit `c1e3a4e`, 23 October 2026), moved here from the repository root. Pre-defense item 2, [DOA-4](https://yeralytemir.youtrack.cloud/issue/DOA-4). Full anonymised records of interviews I1–I3 are being added to this folder.
+
 ## 1 Primary evidence and stakeholder engagement
 
 To ground the system requirements in real needs, evidence was gathered through structured interviews with user representatives and a domain expert, together with a substantive agreement with the project supervisor/client on the project scope.

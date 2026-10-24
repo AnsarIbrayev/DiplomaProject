@@ -83,7 +83,7 @@ Alternatives and justification: [technology comparison](docs/architecture/techno
 | No. | Pre-defense 1 component | Document | YouTrack | Status |
 |---|---|---|---|---|
 | 1 | Project proposal | [docs/proposal/proposal.md](docs/proposal/proposal.md) | DOA-3 | Draft for supervisor review |
-| 2 | Evidence of relevance | [docs/research/relevance-summary.md](docs/research/relevance-summary.md), [docs/research/](docs/research/README.md) | DOA-4 | Secondary evidence; survey and interviews planned |
+| 2 | Evidence of relevance | [docs/research/relevance-summary.md](docs/research/relevance-summary.md), [docs/research/](docs/research/README.md) | DOA-4 | Secondary evidence and 3 interviews (2 users, 1 dietitian); full interview records and survey pending |
 | 3 | Literature review | [docs/research/literature-review.md](docs/research/literature-review.md), source registry [research/literature/](research/literature/README.md) | DOA-5 | Done |
 | 4 | Existing system comparison | [docs/research/existing-systems.md](docs/research/existing-systems.md) | DOA-6 | Done |
 | 5 | Technology comparison | [docs/architecture/technology-comparison.md](docs/architecture/technology-comparison.md) | DOA-7 | Done |

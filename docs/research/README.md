@@ -4,7 +4,7 @@ Pre-defense item 2 (evidence of relevance) · YouTrack task [DOA-4](https://yera
 
 The committee asks *"what evidence informs the requirements and whether verified findings are distinguished from assumptions"*. The listed evidence types include analysis of available data, observation of relevant processes, and discussions with users.
 
-**Current basis (22 October 2026).** Item 2 is presented on verified **secondary evidence**: prevalence statistics, published studies of users of weight-management apps, and a structured comparison of existing applications. **Primary user evidence (online survey and interviews) is planned validation**: the materials are ready, but no responses have been collected. Every user-level statement that depends on it is marked as an assumption. The report is in [relevance-summary.md](relevance-summary.md), Section 6.2.
+**Current basis (22 October 2026).** Item 2 is presented on verified **secondary evidence**: prevalence statistics, published studies of users of weight-management apps, and a structured comparison of existing applications. **Update, 24 October 2026:** three interviews (two users, one dietitian) were conducted by Kadirbay B.; see the [interview summary](interviews/interview-summary-kadirbay.md). Their full records are being added. **The online survey is planned validation**: the form is ready, but no responses have been collected. Every user-level statement that depends on it is marked as an assumption. The report is in [relevance-summary.md](relevance-summary.md), Section 6.2.
 
 ## Contents
 
@@ -20,7 +20,8 @@ The committee asks *"what evidence informs the requirements and whether verified
 | [03-recruitment-and-consent.md](03-recruitment-and-consent.md) | Interview recruitment, screening, informed consent (EN/RU) | Ready |
 | [04-interview-guide.md](04-interview-guide.md) | User guide (Q1–Q20) and expert guide (X1–X8), EN/RU | Ready |
 | [05-results-template.md](05-results-template.md) | Interview record template, data-protection rules | Ready |
-| [interviews/](interviews/) | Anonymised interview records | Empty until interviews take place |
+| [interviews/](interviews/) | Interview summary I1–I3 (Kadirbay B.) and anonymised interview records | Summary in; full records pending |
+| [drafts/existing-systems-kadirbay.md](drafts/existing-systems-kadirbay.md) | Alternative existing-system comparison draft (Kadirbay B., four systems, eight criteria) | Draft; the submitted comparison is [existing-systems.md](existing-systems.md) |
 
 ## Planned validation
 
@@ -28,7 +29,7 @@ The committee asks *"what evidence informs the requirements and whether verified
 |---|---|---|
 | Publish the survey and share it in AITU chats and with contacts | Ansar (team helps share) | At least 15 eligible responses |
 | Enter aggregated counts in `survey/results.md` and update the register | Claude, from the export | After responses arrive |
-| Interviews with 3–4 users and 1 expert | Ansar | Before pre-defense 2 |
+| Full records of interviews I1–I3; 1–2 more user interviews if needed | Kadirbay B., Ansar | Before pre-defense 2 |
 
 ## Principles
 
