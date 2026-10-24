@@ -83,7 +83,7 @@ Alternatives and justification: [technology comparison](docs/architecture/techno
 | No. | Pre-defense 1 component | Document | YouTrack | Status |
 |---|---|---|---|---|
 | 1 | Project proposal | [docs/proposal/proposal.md](docs/proposal/proposal.md) | DOA-3 | Draft for supervisor review |
-| 2 | Evidence of relevance | [docs/research/relevance-summary.md](docs/research/relevance-summary.md), [docs/research/](docs/research/README.md) | DOA-4 | Secondary evidence and 3 interviews (2 users, 1 dietitian); full interview records and survey pending |
+| 2 | Evidence of relevance | [docs/research/relevance-summary.md](docs/research/relevance-summary.md), [docs/research/](docs/research/README.md) | DOA-4 | Secondary evidence and 3 interviews (2 users, 1 dietitian, summary only); survey pending |
 | 3 | Literature review | [docs/research/literature-review.md](docs/research/literature-review.md), source registry [research/literature/](research/literature/README.md) | DOA-5 | Done |
 | 4 | Existing system comparison | [docs/research/existing-systems.md](docs/research/existing-systems.md) | DOA-6 | Done |
 | 5 | Technology comparison | [docs/architecture/technology-comparison.md](docs/architecture/technology-comparison.md) | DOA-7 | Done |
@@ -92,7 +92,7 @@ Alternatives and justification: [technology comparison](docs/architecture/techno
 | 8 | UX / prototype | [docs/prototype/README.md](docs/prototype/README.md), code in [mobile/](mobile/) | DOA-11 | Clickable prototype, synthetic demo data |
 | 9 | Verification and evaluation plan | [docs/evaluation/evaluation-plan.md](docs/evaluation/evaluation-plan.md) | DOA-12 | Done |
 | 10 | Project management and risks | [docs/project-management.md](docs/project-management.md) | DOA-13 | Done |
-| 11 | Supervisor feedback | [docs/meetings/](docs/meetings/2026-10-supervisor-review/README.md) | DOA-14 | Package prepared; feedback log open |
+| 11 | Supervisor feedback | [docs/meetings/](docs/meetings/2026-10-supervisor-review/README.md) | DOA-14 | Package prepared; no meeting or feedback yet |
 
 The backend (`backend/`), the production rule engine and the verification code (`ml/`) are not implemented yet; they are planned in DOA-16 … DOA-23 (November–December 2026).
 

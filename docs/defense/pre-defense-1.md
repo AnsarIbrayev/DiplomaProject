@@ -32,8 +32,8 @@
 
 ## 2. Known Limitations
 
-1. **Evidence of relevance (item 2) rests mainly on secondary evidence.** Three interviews (two users, one dietitian) were held; their summary is in the repository, the full anonymised records are still being added, and their findings have not yet been coded into the [assumptions register](../research/02-assumptions-register.md). No survey responses have been collected. The survey and the interview records are planned before pre-defense 2.
-2. **Supervisor feedback (item 11).** The review package is prepared. The feedback log is filled only with the supervisor's own comments, copied verbatim, as they are received.
+1. **Evidence of relevance (item 2) rests mainly on secondary evidence.** Three interviews (two users, one dietitian) were held; their summary is in the repository, but no separate records (date, mode, notes) were kept, so their findings are treated as preliminary and are not coded into the [assumptions register](../research/02-assumptions-register.md). No survey responses have been collected. The survey and further recorded interviews are planned before pre-defense 2.
+2. **Supervisor feedback (item 11).** No meeting with the supervisor has taken place yet, and no feedback has been received. The review package is prepared, and the supervisor is being given access to the repository. The feedback log is filled only with the supervisor's own comments, copied verbatim, as they are received.
 3. **Prototype.** The prototype has no backend, database, notifications or wearable connection. It uses one synthetic demo profile; food nutrient values are illustrative and are not taken from a verified food composition table. AI-assisted food logging is simulated. The prototype rule base contains placeholder values marked (T).
 4. **Team-set values.** Values marked (T) in the requirements and the evaluation plan are design choices of the team, not findings from data, and are subject to supervisor approval.
 5. **Not yet implemented.** Backend, production rule engine and verification code (`backend/`, `ml/`). Thesis chapters in `docs/thesis/` are outlines.
