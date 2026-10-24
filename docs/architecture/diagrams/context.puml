@@ -1,0 +1,43 @@
+@startuml context
+' System context diagram (DOA-9).
+' Shows the system as one box, the people who use it and the external
+' systems it exchanges data with. Actors match the use case diagram (DOA-10).
+!include style.iuml
+left to right direction
+title System Context Diagram
+
+actor "Applicant\n(person before enrollment)" as APP
+actor "Participant\n(intervention or control arm)" as PAR
+actor "Research administrator" as RA
+actor "Rule maintainer" as RM
+
+rectangle "**Weight Management Recommender System**\n\nMobile application (Flutter, Android and iOS)\n+ backend (FastAPI, PostgreSQL, rule engine)\n\nScreens eligibility, collects food, weight and step data,\nidentifies deviating lifestyle factors and gives\nexplained, rule-based recommendations" as SYS #EEF2F7
+
+rectangle "Health Connect (Android) /\nApple HealthKit (iOS)\n<size:10>on-device health data store</size>" as HEALTH
+rectangle "Wearable device\n<size:10>optional; writes to the</size>\n<size:10>platform health store</size>" as WEAR
+cloud "Multimodal AI service\n<size:10>external language model API;</size>\n<size:10>food-logging suggestions only</size>" as AI
+rectangle "Mobile operating system\n<size:10>local notifications</size>" as OS
+rectangle "Pilot analysis scripts\n<size:10>Python, ml/ directory</size>" as ANA
+
+APP --> SYS : registration, consent,\nscreening answers
+APP <-- SYS : eligibility decision;\nreferral if not eligible
+PAR --> SYS : food, weight and waist logs,\ncheck-ins, questionnaires
+PAR <-- SYS : progress, check-in requests;\nintervention arm also: factor ranking,\nexplained recommendations, prompts
+RA --> SYS : enrollment actions,\nstudy measurements,\nAI feature switch
+RA <-- SYS : enrollment status, adverse events,\npseudonymized CSV export
+RM --> SYS : versioned rule definitions,\nverification runs
+RM <-- SYS : verification report\n(hard-constraint results)
+
+SYS <-- HEALTH : steps (hourly), heart rate\n<size:10>with user permission</size>
+HEALTH <-- WEAR : steps, heart rate
+SYS --> AI : meal text or photo,\nfood list (no user identifiers)
+SYS <-- AI : candidate foods and portions
+SYS --> OS : scheduled activity prompts
+SYS --> ANA : CSV files + data dictionary\n<size:10>(via the research administrator)</size>
+
+legend bottom
+  Arrows show the main data flows. The system boundary includes the mobile app,
+  the backend and its database (development on AWS with synthetic data only;
+  pilot on a server in Kazakhstan, NFR-06).
+endlegend
+@enduml

@@ -1,0 +1,403 @@
+{
+  "@@locale": "en",
+  "appTitle": "Weight Assistant",
+  "demoBadge": "Prototype · demo data",
+  "next": "Next",
+  "save": "Save",
+  "cancel": "Cancel",
+  "close": "Close",
+  "add": "Add",
+  "chooseLanguage": "Choose the language",
+  "welcomeTitle": "Personal weight management",
+  "welcomeBody": "The app finds which of your daily habits differ most from health guidelines and gives explained nutrition and activity recommendations.",
+  "start": "Start",
+  "consentTitle": "Study information and consent",
+  "consentBody": "This app is part of a university research project. Before any data are collected, please read the main points:",
+  "consentPoint1": "The app does not diagnose diseases and does not replace a doctor.",
+  "consentPoint2": "Your data are stored under a pseudonymous ID; your name is never included in research data.",
+  "consentPoint3": "You can withdraw at any time and ask to delete your data.",
+  "consentPoint4": "You may be assigned to a group with tracking only or with recommendations.",
+  "consentAgree": "I agree to take part",
+  "consentPrototypeNote": "Prototype: nothing you enter is stored or sent anywhere.",
+  "screeningTitle": "A few questions",
+  "screeningBody": "We check that the app is safe for you to use without medical supervision.",
+  "ageYears": "Age, years",
+  "heightCm": "Height, cm",
+  "weightKg": "Weight, kg",
+  "waistCm": "Waist, cm",
+  "bmiValue": "BMI: {bmi} kg/m²",
+  "@bmiValue": {
+    "placeholders": {
+      "bmi": {
+        "type": "String"
+      }
+    }
+  },
+  "exclusionsTitle": "Does any of this apply to you?",
+  "exDiabetes": "Diagnosed diabetes",
+  "exCardio": "Diagnosed cardiovascular disease",
+  "exPregnancy": "Pregnancy",
+  "exMedication": "Currently taking weight-loss medication",
+  "exParq": "\"Yes\" to any PAR-Q+ general health question",
+  "exParqHint": "PAR-Q+ is a standard pre-exercise questionnaire (eparmedx.com).",
+  "checkEligibility": "Check",
+  "eligibleTitle": "You can use the app",
+  "eligibleBody": "The first 7 days are a baseline week: just log your food, weight and steps. Personal targets start on day 8.",
+  "armAssigned": "Study group: {arm}",
+  "@armAssigned": {
+    "placeholders": {
+      "arm": {
+        "type": "String"
+      }
+    }
+  },
+  "armIntervention": "recommendations",
+  "armControl": "tracking only",
+  "armRandomNote": "In the pilot the group is assigned at random and cannot be changed.",
+  "openDemo": "Open the demo (day 14)",
+  "ineligibleTitle": "This app is not suitable for you",
+  "ineligibleBody": "For your safety, weight management in your situation should be supervised by a doctor. Please contact your polyclinic or a family doctor. The app will not give you recommendations.",
+  "ineligibleReasons": "Reason:",
+  "reasonAge": "age outside 18–60 years",
+  "reasonBmiLow": "BMI below 25.0",
+  "reasonBmiHigh": "BMI of 35.0 or higher",
+  "reasonDiabetes": "diabetes",
+  "reasonCardio": "cardiovascular disease",
+  "reasonPregnancy": "pregnancy",
+  "reasonMedication": "weight-loss medication",
+  "reasonParq": "PAR-Q+ answer",
+  "backToStart": "Back to start",
+  "navToday": "Today",
+  "navLog": "Log",
+  "navFactors": "Factors",
+  "navPlan": "Plan",
+  "navProgress": "Progress",
+  "navSettings": "Settings",
+  "dayOfStudy": "Day {day} · week {week}",
+  "@dayOfStudy": {
+    "placeholders": {
+      "day": {
+        "type": "int"
+      },
+      "week": {
+        "type": "int"
+      }
+    }
+  },
+  "energyToday": "Energy today",
+  "stepsToday": "Steps today",
+  "ofTarget": "of {target}",
+  "@ofTarget": {
+    "placeholders": {
+      "target": {
+        "type": "String"
+      }
+    }
+  },
+  "kcal": "kcal",
+  "steps": "steps",
+  "mg": "mg",
+  "g": "g",
+  "topFactor": "Your main factor this week",
+  "seeAllFactors": "All factors",
+  "topRecommendation": "First recommendation",
+  "openPlan": "Open the plan",
+  "checkInDue": "Weekly check-in is due",
+  "checkInOpen": "Answer (1 min)",
+  "promptTitle": "Activity prompt (example)",
+  "promptBody": "By now you usually have more steps. A 10-minute walk would bring you closer to today's target.",
+  "suspendedBanner": "Activity recommendations are paused because you reported a health problem. Please see a doctor.",
+  "controlTodayNote": "Tracking mode: log your food, weight and steps. Recommendations are not shown in this study group.",
+  "logTitle": "Food and weight",
+  "searchFood": "Search food",
+  "demoFoodNote": "Demo food list: nutrient values are approximate and only for the prototype.",
+  "localFood": "local",
+  "per100g": "{kcal} kcal per 100 g",
+  "@per100g": {
+    "placeholders": {
+      "kcal": {
+        "type": "String"
+      }
+    }
+  },
+  "portionGrams": "Portion, g",
+  "addToDiary": "Add to diary",
+  "aiLogging": "Describe a meal",
+  "aiHint": "e.g. plov, tea and bread",
+  "aiSimulatedNote": "Prototype: no AI service is called. Words are matched against the food list to show the confirm-before-save step.",
+  "aiPropose": "Find foods",
+  "aiProposalTitle": "Check before saving",
+  "aiConfirm": "Confirm and save",
+  "aiNothing": "Nothing found in the food list.",
+  "todayEntries": "Logged today",
+  "noEntries": "Nothing logged yet",
+  "logWeight": "Log weight and waist",
+  "weightSaved": "Saved",
+  "entryAdded": "Added: {name}",
+  "@entryAdded": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "totalToday": "Total: {kcal} kcal",
+  "@totalToday": {
+    "placeholders": {
+      "kcal": {
+        "type": "String"
+      }
+    }
+  },
+  "factorsTitle": "Your factors",
+  "factorsIntro": "Average of the last 7 days compared with guideline targets. The higher a factor, the more it differs from its target.",
+  "factorEnergy": "Energy intake",
+  "factorMacros": "Macronutrient balance",
+  "factorCalcium": "Calcium",
+  "factorFruitVeg": "Fruit and vegetables",
+  "factorSteps": "Daily steps",
+  "factorSedentary": "Prolonged sitting",
+  "groupDiet": "Diet",
+  "groupActivity": "Physical activity",
+  "groupSedentary": "Sedentary behaviour",
+  "valueLabel": "Your value",
+  "targetLabel": "Target",
+  "ruleLabel": "Rule",
+  "onTarget": "On target",
+  "deviationPct": "Deviation {pct}%",
+  "@deviationPct": {
+    "placeholders": {
+      "pct": {
+        "type": "String"
+      }
+    }
+  },
+  "atLeast": "at least {value}",
+  "@atLeast": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "atMost": "at most {value}",
+  "@atMost": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "perDay": "per day",
+  "periodsPerDay": "periods/day",
+  "baselineWeekFactors": "Step targets start after the baseline week.",
+  "planTitle": "Your plan",
+  "planIntro": "Recommendations are ordered by your factors. Tap \"Why?\" to see the rule behind each one.",
+  "constraintsTitle": "Safety checks of the plan",
+  "constraintEnergy": "Energy target not below resting energy",
+  "constraintMacros": "Macronutrients within guideline ranges",
+  "constraintCalcium": "Calcium target not below the recommended intake",
+  "constraintIntensity": "Activity raised gradually from your own baseline",
+  "why": "Why?",
+  "macroProtein": "protein",
+  "macroFat": "fat",
+  "macroCarbs": "carbohydrates",
+  "recReduceEnergyTitle": "Eat a little less: about {target} kcal a day",
+  "@recReduceEnergyTitle": {
+    "placeholders": {
+      "target": {
+        "type": "String"
+      }
+    }
+  },
+  "recReduceEnergyBody": "Your average was {value} kcal. Smaller portions of the most energy-dense dishes are the easiest change.",
+  "@recReduceEnergyBody": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "recIncreaseEnergyTitle": "Do not eat too little: about {target} kcal a day",
+  "@recIncreaseEnergyTitle": {
+    "placeholders": {
+      "target": {
+        "type": "String"
+      }
+    }
+  },
+  "recIncreaseEnergyBody": "Your average was {value} kcal. Eating too little is hard to keep up and can harm health.",
+  "@recIncreaseEnergyBody": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "recMacrosTitle": "Balance your plate: {nutrient}",
+  "@recMacrosTitle": {
+    "placeholders": {
+      "nutrient": {
+        "type": "String"
+      }
+    }
+  },
+  "recMacrosBody": "{nutrient} gave {value}% of your energy; the recommended range is {min}–{max}%.",
+  "@recMacrosBody": {
+    "placeholders": {
+      "nutrient": {
+        "type": "String"
+      },
+      "value": {
+        "type": "String"
+      },
+      "min": {
+        "type": "String"
+      },
+      "max": {
+        "type": "String"
+      }
+    }
+  },
+  "recCalciumTitle": "Add calcium: {target} mg a day",
+  "@recCalciumTitle": {
+    "placeholders": {
+      "target": {
+        "type": "String"
+      }
+    }
+  },
+  "recCalciumBody": "You had about {value} mg a day. Kefir, cottage cheese or other dairy products once or twice a day close most of the gap.",
+  "@recCalciumBody": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "recFruitVegTitle": "At least {target} g of fruit and vegetables a day",
+  "@recFruitVegTitle": {
+    "placeholders": {
+      "target": {
+        "type": "String"
+      }
+    }
+  },
+  "recFruitVegBody": "You had about {value} g a day. Add a vegetable salad to lunch and a fruit as a snack.",
+  "@recFruitVegBody": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "recStepsTitle": "Step target this week: {target}",
+  "@recStepsTitle": {
+    "placeholders": {
+      "target": {
+        "type": "String"
+      }
+    }
+  },
+  "recStepsBody": "Your baseline is {baseline} steps; the target rises a little each week. Last week you averaged {value}.",
+  "@recStepsBody": {
+    "placeholders": {
+      "baseline": {
+        "type": "String"
+      },
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "recResistanceTitle": "Two strength sessions a week",
+  "recResistanceBody": "For example, Tuesday and Friday: squats, push-ups against a wall, resistance band rows. Start easy.",
+  "recSittingTitle": "Break up long sitting",
+  "recSittingBody": "You had about {value} periods of sitting for an hour or more a day. Stand up and walk for 2–3 minutes every hour.",
+  "@recSittingBody": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "whyTitle": "Why this recommendation",
+  "whyReason": "Reason",
+  "whyRule": "Rule",
+  "whyInputs": "Your data used",
+  "whySource": "Evidence source",
+  "whyReasonEnergy": "Your average energy intake is outside the target range calculated from your weight, height, age and activity.",
+  "whyReasonMacros": "The share of energy from one macronutrient is outside the range recommended for adults.",
+  "whyReasonCalcium": "Your calcium intake is below the recommended daily amount for your age and sex.",
+  "whyReasonFruitVeg": "You eat fewer fruit and vegetables than the recommended minimum.",
+  "whyReasonSteps": "Your steps are below this week's target, which is set from your own baseline week.",
+  "whyReasonResistance": "Guidelines recommend muscle-strengthening activity on at least two days a week.",
+  "whyReasonSitting": "You have more long sitting periods than the limit set in the plan.",
+  "ruleVersion": "{id}, version {version}",
+  "@ruleVersion": {
+    "placeholders": {
+      "id": {
+        "type": "String"
+      },
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "statusGuideline": "based on a guideline",
+  "statusProject": "project decision",
+  "statusTeamSet": "contains team-set placeholder values",
+  "inWeight": "Weight, kg",
+  "inHeight": "Height, cm",
+  "inAge": "Age, years",
+  "inPal": "Activity level (PAL)",
+  "inIntakeKcal": "Average intake, kcal/day",
+  "inTargetKcal": "Target, kcal/day",
+  "inSharePct": "Share of energy, %",
+  "inMinPct": "Lower limit, %",
+  "inMaxPct": "Upper limit, %",
+  "inCalciumMg": "Average calcium, mg/day",
+  "inTargetMg": "Recommended, mg/day",
+  "inFruitVegG": "Average fruit and vegetables, g/day",
+  "inTargetG": "Recommended minimum, g/day",
+  "inBaselineSteps": "Baseline, steps/day",
+  "inWeek": "Study week",
+  "inMeanSteps": "Last 7 days, steps/day",
+  "inTargetSteps": "Target, steps/day",
+  "inSessionsPerWeek": "Sessions per week",
+  "inSittingPeriods": "Long sitting periods per day",
+  "inMaxPeriods": "Limit per day",
+  "progressTitle": "Progress",
+  "weightTrend": "Weight, kg",
+  "weightChange": "Change since day 1: {value} kg",
+  "@weightChange": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "stepsChart": "Steps per day",
+  "intakeChart": "Energy per day, kcal",
+  "targetLine": "target",
+  "baselineLabel": "baseline week",
+  "checkInTitle": "Weekly check-in",
+  "checkInQ1": "During the last week, did you have an injury, pain, dizziness, chest pain or another health problem?",
+  "checkInQ2": "Has anything changed: pregnancy, a new diagnosis of diabetes or heart disease, or new weight-loss medication?",
+  "yes": "Yes",
+  "no": "No",
+  "submit": "Submit",
+  "checkInThanks": "Thank you! See you next week.",
+  "referralTitle": "Please see a doctor",
+  "referralBody": "We have paused activity recommendations and prompts. Contact your polyclinic or family doctor before continuing.",
+  "settingsTitle": "Settings",
+  "language": "Language",
+  "studyArm": "Study group (demo switch)",
+  "armDemoNote": "Only in the prototype: lets you compare the two versions of the app. In the pilot the group is assigned at random.",
+  "activeHours": "Active hours for prompts",
+  "activeHoursValue": "09:00–21:00",
+  "ruleBase": "Rule base (prototype)",
+  "restartDemo": "Restart the demo",
+  "aboutPrototype": "About the prototype",
+  "aboutBody": "Clickable prototype of a diploma project (Astana IT University). The profile and logs are synthetic demo data. Rule values marked as team-set are placeholders until the rule base is finalized."
+}
