@@ -12,6 +12,7 @@ A cross-platform mobile application with a backend that screens adults with over
 | **Current stage** | Pre-defense 1 (24 October 2026): analysis, design, planning and clickable prototype |
 | **Pre-defense 1 submission** | [docs/defense/pre-defense-1.md](docs/defense/pre-defense-1.md) |
 | **Prototype** | Clickable Flutter app in [`mobile/`](mobile/), screens in [docs/prototype](docs/prototype/README.md) (no Figma file: the prototype is coded) |
+| **Online demo** | [Web build of the prototype](https://claude.ai/artifact/R7UrdujHwhD1bVwGGv4BXE): opens in a browser, no installation (about 15 MB on first load) |
 
 ---
 
@@ -134,6 +135,8 @@ flutter run             # on an Android 9+ or iOS 15+ device or emulator
 flutter test            # rule, widget and localization tests
 ```
 
+To try the prototype without installing Flutter, open the [online web build](https://claude.ai/artifact/R7UrdujHwhD1bVwGGv4BXE).
+
 Demo links and screens: [mobile/README.md](mobile/README.md), [docs/prototype/README.md](docs/prototype/README.md). The prototype uses synthetic demo data only and has no backend.
 
 Backend configuration will be read from environment variables; copy [.env.example](.env.example) to `.env` and fill in local values. `.env` is ignored by Git.
@@ -142,5 +145,5 @@ Backend configuration will be read from environment variables; copy [.env.exampl
 
 - Tasks: YouTrack project [DOA](https://yeralytemir.youtrack.cloud/projects/DOA). Each task has an assignee, priority, start date, deadline and acceptance criteria.
 - Branches `docs/DOA-N-…`, `feature/DOA-N-…`, `fix/DOA-N-…` from `develop`; commits `<type>(<area>): <description> [DOA-N]`; pull requests into `develop`; `main` is the reviewed baseline. Rules: [CONTRIBUTING.md](CONTRIBUTING.md).
-- Each pre-defense submission is tagged: `pre-defense-1`, `pre-defense-2`, `final-pre-defense`.
+- Each submission is tagged on `main`. Pre-defense 1 is submitted as `prob-period-1`, the tag name required by the submission form; `pre-defense-1` marks the first merge of the same work into `main`.
 - No passwords, keys or personal data are committed.
